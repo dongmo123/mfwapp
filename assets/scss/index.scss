@@ -760,130 +760,187 @@ a {
     .da-banner{
         margin-bottom:30px;
     }
-    .mfw-salse{
-        margin-bottom: 30px;
-        .hd{
-            margin-bottom: 12px;
-            font-size: 18px;
-            color: #333;
-            line-height: 35px;
-        }
-        .bd{
-            ul{
-                margin-right: -20px;
-                .item{
-                    float: left;
-                    width: 220px;
-                    display: inline;
-                    margin-right: 20px;
-                    a{
-                        display:block;
-                        .image{
+
+}
+.mfw-salse{
+    margin-bottom: 30px;
+    .hd{
+        margin-bottom: 12px;
+        font-size: 18px;
+        color: #333;
+        line-height: 35px;
+    }
+    .bd{
+        height:217px;
+        ul{
+            margin-right: -20px;
+            .item{
+                float: left;
+                width: 220px;
+                display: inline;
+                margin-right: 20px;
+                a{
+                    display:block;
+                    .image{
+                        height:135px;
+                        position:relative;
+                        img{
+                            width:220px;
                             height:135px;
-                            position:relative;
-                            img{
-                                width:220px;
-                                height:135px;
-                            }
-                            .discount{
-                                position: absolute;
-                                top: 0;
-                                right: -4px;
-                                height: 20px;
-                                line-height: 20px;
-                                padding: 0 10px;
-                                background-color: #ff6155;
-                                font-size: 14px;
-                                color: #fff;
-                                font-style:italic;
-                                b{
-                                    font-size: 14px;
-                                    font-weight: bold;
-                                }
-                                &::after{
-                                    content: '';
-                                    position: absolute;
-                                    right: 0;
-                                    bottom: -8px;
-                                    border-top: 4px solid #7e1811;
-                                    border-right: 4px dashed transparent;
-                                    border-bottom: 4px dashed transparent;
-                                    overflow: hidden;
-                                    line-height: 0;
-                                    font-size: 0;
-                                }
-                            }
-                            .info{
-                                position: absolute;
-                                left: 0;
-                                right: 0;
-                                bottom: 0;
-                                height: 35px;
-                                background-color: #ff6155;
-                                background-color: rgba(255,97,85,.9);
-                                filter: alpha(90);
-                                padding: 0 8px;
-                                line-height: 34px;
-                                color: #fff;
-                                font-size: 14px;
-                                .price{
-                                    float: right;
-                                    color: #fff;
-                                    font-size: 16px;
-                                    text-align:right;
-                                    padding:0 5px 5px;
-                                    strong{
-                                        font-size:27px;
-                                        font-weight:bold;
-                                    }
-                                }
-
-                            }
                         }
-                        h3{
-                            margin: 5px 0;
-                            padding: 5px 10px 0;
-                            font-size: 14px;
-                            color: #000;
+                        .discount{
+                            position: absolute;
+                            top: 0;
+                            right: -4px;
+                            height: 20px;
                             line-height: 20px;
-                            height: 40px;
-                            overflow: hidden;
-                            font-weight: normal;
-                            background-color: #fff;
-                            position: relative;
-                            z-index: 5;
-                            height:40px;
-                        }
-                        .price{
-                            text-align: right;
-                            font-size: 16px;
-                            color: #ff9d00;
-                            padding: 0 5px 5px;
-                            strong {
-                                font-size: 18px;
-                            }
-                            em {
+                            padding: 0 10px;
+                            background-color: #ff6155;
+                            font-size: 14px;
+                            color: #fff;
+                            font-style:italic;
+                            b{
                                 font-size: 14px;
-                                font-style: normal;
+                                font-weight: bold;
+                            }
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                right: 0;
+                                bottom: -8px;
+                                border-top: 4px solid #7e1811;
+                                border-right: 4px dashed transparent;
+                                border-bottom: 4px dashed transparent;
+                                overflow: hidden;
+                                line-height: 0;
+                                font-size: 0;
                             }
                         }
-                        &:hover{
-                            h3{
+                        .info{
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            height: 35px;
+                            background-color: #ff6155;
+                            background-color: rgba(255,97,85,.9);
+                            filter: alpha(90);
+                            padding: 0 8px;
+                            line-height: 34px;
+                            color: #fff;
+                            font-size: 14px;
+                            .price{
+                                float: right;
+                                color: #fff;
+                                font-size: 16px;
+                                text-align:right;
+                                padding:0 5px 5px;
+                                strong{
+                                    font-size:27px;
+                                    font-weight:bold;
+                                }
+                            }
 
-                                background-color:#F8F8F8;
-                                color:#ff9d00;
-                            }
-                            >.price{
-                                background-color:#f8f8f8;
-                            }
+                        }
+                    }
+                    h3{
+                        margin: 5px 0;
+                        padding: 5px 10px 0;
+                        font-size: 14px;
+                        color: #000;
+                        line-height: 20px;
+                        height: 40px;
+                        overflow: hidden;
+                        font-weight: normal;
+                        background-color: #fff;
+                        position: relative;
+                        z-index: 5;
+                        height:40px;
+                    }
+                    .price{
+                        text-align: right;
+                        font-size: 16px;
+                        color: #ff9d00;
+                        padding: 0 5px 5px;
+                        strong {
+                            font-size: 18px;
+                        }
+                        em {
+                            font-size: 14px;
+                            font-style: normal;
                         }
                     }
                     &:hover{
-                        background-color:#f8f8f8;
+                        h3{
+
+                            background-color:#F8F8F8;
+                            color:#ff9d00;
+                        }
+                        >.price{
+                            background-color:#f8f8f8;
+                        }
                     }
+                }
+                &:hover{
+                    background-color:#f8f8f8;
                 }
             }
         }
     }
+}
+.mfw-travelnotes{
+    .navbar{
+        margin-bottom: 20px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 16px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #e4e4e4;
+        .tn-nav{
+            float:left;
+            >li{
+                float: left;
+                width: 150px;
+                display: inline;
+                text-align: center;
+                a{
+                    font-size:18px;
+                }
+            }
+            .active{
+                padding-bottom: 6px;
+                border-bottom: 3px solid #ff9d00;
+                position: relative;
+                z-index: 11;
+                a{
+                    color:#ff9d00;
+                }
+            }
+        }
 
+    }
+}
+.tn-menu{
+    display: inline-block;
+    margin-left: 7px;
+    line-height: 20px;
+    border: 1px solid #e5e5e5;
+    color: #666;
+    font-size: 12px;
+    padding: 0 10px 0 8px;
+    cursor: pointer;
+    vertical-align: 2px;
+    .tn-menu-icon{
+        display:inline-block;
+        float: left;
+        margin: 6px 5px 0 0;
+        width: 11px;
+        height: 8px;
+        background: url('../images/icon/index-sprites9.png') no-repeat 0 -130px;
+    }
+    &:hover{
+        border-color: #ff9d00;
+        background-color: #ff9d00;
+        color: #fff;
+    }
 }
