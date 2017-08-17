@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "jquery": "^3.2.1",
+    "jquery-mousewheel": "^3.1.13",
     "vue": "^2.4.2"
   }
 }
