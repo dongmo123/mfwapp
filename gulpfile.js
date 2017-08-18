@@ -15,6 +15,7 @@ gulp.task('server', function() {
     gulp.watch("assets/scss/*.scss", ['scss']).on('change', reload);
     gulp.watch("./*.html").on('change', reload);
     gulp.watch("./assets/js/*.js").on('change', reload);
+    gulp.watch("./assets/js/*.json").on('change', reload);
 });
 
 // 任务：编译sass文件
