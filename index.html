@@ -61,11 +61,27 @@
                     <a class="weibo-login" href="/weibo" title="微博登录"></a>
                     <a class="qq-login" href="/qq" title="QQ登录"></a>
                     <a class="weixin-login" href="/wechat" title="微信登录"></a>
-                    <a class="showlogin" title="登录蚂蜂窝" href="">登录</a><span class="split">|</span><a href="/reg.html" title="注册帐号" class="showreg">注册</a>
+                    <a class="./showlogin.html" title="登录蚂蜂窝" href="">登录</a><span class="split">|</span><a href="./reg.html" title="注册帐号" class="showreg">注册</a>
                 </div>
             </div>
         </div>
     </header>
+    <div class="mfw-toolbar" id="toolbar">
+        <div class="toolbar-outer">
+            <a href="javascript:void(0);" title="" class="btn top">
+                <i class="icon-top"></i>
+                <em>返回顶部</em>
+            </a>
+            <a href="#top" title="" class="btn feedback">
+                <i class="icon-feedback"></i>
+                <em>意见反馈</em>
+            </a>
+            <div href="#top" title="" class="btn code">
+                <i class="icon-code"></i>
+                <a href="" title="" class="codeimg"><img src="assets/images/icon/code.jpeg"></a>
+            </div>
+        </div>
+    </div>
     <div class="mfw-focus">
         <div class="show-slider" id="banner">
             <ul class="show-image">
@@ -155,10 +171,10 @@
                         <form action="/search" method="get">
                         <div class="search-wrapper">
                             <div class="search-input">
-                                <input name="mdd" type="text" placeholder="我要去..." id="_j_index_search_input_mdd">
+                                <input name="mdd" type="text" placeholder="我要去..." id="index_search_input_mdd">
                             </div>
                         </div>
-                        <div class="search-button" id="_j_index_search_btn_mdd">
+                        <div class="search-button" id="index_search_btn_mdd">
                             <a role="button" href="javascript:"><i class="icon-search"></i></a>
                         </div>
                         </form>
@@ -446,13 +462,13 @@
                 <div class="navbar">
                     <ul class="tn-nav" id="tn_nav">
                         <li class="gs-tab active">
-                            <a href="javascript:void(0);" title="">热门游记</a>
+                            <a href="javascript:void(0);" title="" data-type="hots">热门游记</a>
                             <span class="tn-menu open-search">
                                 <i class="tn-menu-icon"></i>筛选
                             </span>
                         </li>
                         <li class="gs-tab n-nav-new">
-                            <a href="javascript:void(0);" title="">最新发表</a>
+                            <a href="javascript:void(0);" title="" data-type="news">最新发表</a>
                         </li>
                     </ul>
                     <div class="tn-write">
@@ -460,28 +476,112 @@
                     </div>
                     <a href="" class="tn-tips" title=""><i></i>我要上首页</a>
                 </div>
-                <div class="tn-dropdown-pop" style="display: none;">这是导航菜单</div>
+                <!-- 筛选start -->
+                <div class="tn-dropdown-pop" id="tn-dropdown-pop" style="">
+                    <span class="underline"></span>
+                    <a class="close" href="javascript:void(0);">×</a>
+                    <div class="section">
+                        <div class="label">目的地</div>
+                        <div class="section-cont">
+                            <div class="mui-search">
+                                <input class="mui-search-inp" type="text" placeholder="输入你想查看的目的地">
+                            </div>
+                            <div class="hot-place">
+                                <a class="gs_item" href="javascript:void(0);">斯里兰卡</a>
+                                <a class="gs_item" href="javascript:void(0);">济州岛</a>
+                                <a class="gs_item" href="javascript:void(0);">香港</a>
+                                <a class="gs_item" href="javascript:void(0);">北京</a>
+                                <a class="gs_item" href="javascript:void(0);">云南</a>
+                                <a class="gs_item" href="javascript:void(0);">泰国</a>
+                                <a class="gs_item" href="javascript:void(0);">青海湖</a>
+                                <a class="gs_item" href="javascript:void(0);">日本</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="label">兴趣</div>
+                        <div class="section-cont">
+                            <ul class="interest-list">
+                                <li class="gs_item" data-objid="417" data-type="1" data-name="吃遍天下">
+                                    <a href="javascript:void(0);">
+                                        <span class="img"><img width="110" src="assets/images/uploads/interest/intimg1.jpeg"></span>
+                                        <h3>吃遍天下</h3>
+                                        <p>无敌手</p>
+                                    </a>
+                                </li>
+                                <li class="gs_item">
+                                    <a href="javascript:void(0);">
+                                        <span class="img"><img width="110" src="assets/images/uploads/interest/intimg2.jpeg"></span>
+                                        <h3>带着对象</h3>
+                                        <p>去虐狗</p>
+                                    </a>
+                                </li>
+                                <li class="gs_item">
+                                    <a href="javascript:void(0);">
+                                        <span class="img"><img width="110" src="assets/images/uploads/interest/intimg3.jpeg"></span>
+                                        <h3>姑娘漂亮</h3>
+                                        <p>就是美</p>
+                                    </a>
+                                </li>
+                                <li class="gs_item">
+                                    <a href="javascript:void(0);">
+                                        <span class="img"><img width="110" src="assets/images/uploads/interest/intimg4.jpeg"></span>
+                                        <h3>带着孩子</h3>
+                                        <p>看世界</p>
+                                    </a>
+                                </li>
+                                <li class="gs_item ">
+                                    <a href="javascript:void(0);">
+                                        <span class="img"><img width="110" src="assets/images/uploads/interest/intimg5.jpeg"></span>
+                                        <h3>登山徒步</h3>
+                                        <p>用脚走</p>
+                                    </a>
+                                </li>
+                                <li class="gs_item">
+                                    <a href="javascript:void(0);">
+                                        <span class="img"><img width="110" src="assets/images/uploads/interest/intimg6.jpeg"></span>
+                                        <h3>带着父母</h3>
+                                        <p>去远方</p>
+                                    </a>
+                                </li>
+                                <li class="gs_item ">
+                                    <a href="javascript:void(0);">
+                                        <span class="img"><img width="110" src="assets/images/uploads/interest/intimg7.jpeg"></span>
+                                        <h3>独自一人</h3>
+                                        <p>最自由</p>
+                                    </a>
+                                </li>
+                                <li class="gs_item">
+                                    <a href="javascript:void(0);">
+                                        <span class="img"><img width="110" src="assets/images/uploads/interest/intimg8.jpeg"></span>
+                                        <h3>短途周末</h3>
+                                        <p>散散心</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- 筛选end -->
                 <div class="pagelet-block">
                     <div id="tn_content">
                         <ul class="tn-list"></ul>
                     </div>
-                    <div align="right" class="m-pagination" id="_j_tn_pagination" data-type="0" data-objid="0">
+                    <div align="right" class="m-pagination" id="tn_pagination">
                         <span class="count">共250页 / 3000条</span>
                         <span class="pg-current">1</span>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="2">2</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="3">3</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="4">4</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="5">5</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="6">6</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="7">7</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="8">8</a>
-                        <a class="pi _j_pageitem" href="javascript:;" data-page="9">9</a>
-                        <a class="pg-next _j_pageitem" href="javascript:;" data-page="2">下一页 &gt;&gt;</a>
+                        <a class="pi pageitem" href="javascript:;" data-page="2">2</a>
+                        <a class="pi pageitem" href="javascript:;" data-page="3">3</a>
+                        <a class="pi pageitem" href="javascript:;" data-page="4">4</a>
+                        <a class="pi pageitem" href="javascript:;" data-page="5">5</a>
+                        <a class="pi pageitem" href="javascript:;" data-page="6">6</a>
+                        <a class="pi pageitem" href="javascript:;" data-page="7">7</a>
+                        <a class="pi pageitem" href="javascript:;" data-page="8">8</a>
+                        <a class="pi pageitem" href="javascript:;" data-page="9">9</a>
+                        <a class="pg-next pageitem" href="javascript:;" data-page="2">下一页 &gt;&gt;</a>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
     <div class="footer">
         <div class="ft-content">
@@ -560,10 +660,10 @@
                     <span class="highlight">4006-345-678</span>
                     <a target="_blank" href="" class="highlight">网站地图</a>
                 </p>
-
             </div>
         </div>
     </div>
+
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="./assets/js/main.js"></script>

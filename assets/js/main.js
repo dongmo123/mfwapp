@@ -161,4 +161,84 @@ $(function() {
             200);
     });
 
+    /*锚点设置*/
+    $('#toolbar .top').click(function() {
+        $('body').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+    if ($('body').scrollTop() <= 500) {
+        $('#toolbar .top').css('display', 'none');
+    } else {
+        $('#toolbar .top').css('display', 'block');
+    }
+    $('body').on('mousewheel', function() {
+        if ($('body').scrollTop() <= 500) {
+            $('#toolbar .top').css('display', 'none');
+        } else {
+            $('#toolbar .top').css('display', 'block');
+        }
+    });
+
+    $(window).scroll(function() {
+        //toolbar();
+    });
+
+    function toolbar() {
+        var minbar = $(document).height() - $('#toolbar .toolbar-outer').offset().top;
+        var dtoflen = $(document).height() - $('.footer').height() - 180;
+        if (minbar <= 550) {
+            $('.toolbar-outer').css({
+                position: 'absolute',
+                top: dtoflen + 'px'
+            });
+        } else {
+            $('.toolbar-outer').css({
+                position: 'fixed',
+                top: 'auto'
+            });
+        }
+
+    }
+    /*筛选点击事件*/
+    $('.open-search').click(function(e) {
+        $('#tn-dropdown-pop').css('display', 'block');
+        e.stopPropagation();
+        e.preventDefault();
+    });
+    $('.close').click(function() {
+        $('#tn-dropdown-pop').css('display', 'none');
+    });
+    /*阻止body默认*/
+    $('#tn-dropdown-pop').click(function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+    });
+    $('#tn-dropdown-pop').mouseleave(function(e) {
+        $('body').click(function() {
+            $('#tn-dropdown-pop').css('display', 'none');
+        });
+        e.stopPropagation();
+        e.preventDefault();
+    });;
+
+
+    /*点击热门游记选项卡切换事件*/
+    $('#tn_nav li').click(function() {
+        $(this).addClass('active').siblings().removeClass('active');
+        $.get('../../assets/js/json.js', {
+            "type": $(this).attr('data-type')
+        }, function(data) {
+            console.log('新数据加载成功');
+        }, 'json');
+        $('#tn_content').stop().animate({
+            opacity: 0
+        }, 400, function() {
+            $(this).stop().animate({
+                opacity: 1
+            }, 400);
+        });
+    });
+
 });
