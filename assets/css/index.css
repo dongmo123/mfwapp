@@ -1168,10 +1168,11 @@ a {
   line-height: 26px;
   margin-bottom: 10px;
   font-size: 18px;
+  position: relative;
 }
 
 .pagelet-block .tn-list .tn-item .tn-wrapper dl dt a {
-  width: 420px;
+  width: 400px;
   height: 26px;
   display: block;
   color: #333;
@@ -1181,8 +1182,10 @@ a {
 }
 
 .pagelet-block .tn-list .tn-item .tn-wrapper dl dt .tn-from-app {
-  float: right;
-  width: auto;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 44px;
   padding: 0 7px;
   border: 1px solid #ff9d00;
   border-radius: 11px;
@@ -1194,7 +1197,6 @@ a {
   overflow: visible;
   background-color: #fff;
   cursor: text;
-  position: absolute;
 }
 
 .pagelet-block .tn-list .tn-item .tn-wrapper dl dt .tn-from-app i {
@@ -1207,11 +1209,16 @@ a {
 
 .pagelet-block .tn-list .tn-item .tn-wrapper dl dt .tn-from-app img {
   position: absolute;
-  right: -5px;
-  top: 0;
-  padding-top: 25px;
-  width: 125px;
+  top: 25px;
+  right: -4px;
   display: none;
+  width: 125px;
+  height: 175px;
+  z-index: 11;
+}
+
+.pagelet-block .tn-list .tn-item .tn-wrapper dl dt .tn-from-app:hover img {
+  display: block;
 }
 
 .pagelet-block .tn-list .tn-item .tn-wrapper dl dd {
@@ -1312,4 +1319,307 @@ a {
   background-position: -60px 0 !important;
   background: url("../images/icon/index-sprites9.png") no-repeat;
   overflow: hidden;
+}
+
+.m-pagination {
+  padding: 20px 5px;
+  line-height: 24px;
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+}
+
+.m-pagination .count {
+  padding-right: 12px;
+}
+
+.m-pagination .pg-current, .m-pagination .pg-next {
+  background-color: #ff9d00;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 4px;
+  color: #fff;
+  vertical-align: middle;
+  padding: 0 7px;
+}
+
+.m-pagination .pi {
+  display: inline-block;
+  margin-right: 1px;
+  padding: 0 7px;
+  margin-left: 1px;
+  padding: 0 7px;
+  border: 0 none;
+  background: 0;
+  border-radius: 4px;
+  color: #666;
+  vertical-align: middle;
+}
+
+.m-pagination .pi:hover {
+  background-color: #EFEFEF;
+}
+
+.m-pagination .pg-next {
+  margin-right: 0;
+}
+
+.m-pagination .pg-next:hover {
+  background-color: #FF8A00;
+}
+
+.content {
+  overflow: hidden;
+}
+
+.footer {
+  background-color: #3C3C3C;
+  width: 100%;
+  color: #c2c2c2;
+  line-height: 22px;
+  padding-bottom: 20px;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.footer .ft-content {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.footer .ft-content .ft-info {
+  padding: 30px 8px 40px 8px;
+  border-bottom: 1px solid #575a5b;
+}
+
+.ft-info {
+  overflow: hidden;
+}
+
+.ft-info .ft-info-col {
+  float: left;
+  display: inline;
+}
+
+.ft-info .ft-info-intro {
+  width: 200px;
+  margin-right: 68px;
+}
+
+.ft-info dt {
+  height: 30px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.ft-info strong {
+  color: #ff9d00;
+  font-weight: normal;
+}
+
+.ft-info .ft-info-about {
+  width: 128px;
+  margin-right: 85px;
+}
+
+.ft-info .ft-info-about a {
+  color: #c2c2c2;
+}
+
+.ft-info .ft-info-about a:hover {
+  color: white;
+}
+
+.ft-info .ft-info-service {
+  width: 135px;
+  margin-right: 80px;
+}
+
+.ft-info .ft-info-service dt {
+  text-align: center;
+  height: 30px;
+}
+
+.ft-info .ft-info-service dd {
+  overflow: hidden;
+  margin-right: -35px;
+}
+
+.ft-info .ft-info-service dd ul li {
+  float: left;
+  width: 85px;
+}
+
+.ft-info .ft-info-service dd ul li a {
+  color: #c2c2c2;
+}
+
+.ft-info .ft-info-service dd ul li a:hover {
+  color: white;
+}
+
+.ft-info .highlight {
+  color: #ff9d00 !important;
+}
+
+.ft-info .ft-info-qrcode {
+  float: right;
+  padding-top: 22px;
+  line-height: 1.4em;
+}
+
+.ft-info .ft-info-social {
+  clear: both;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.ft-info-qrcode {
+  float: right;
+  padding-top: 22px;
+}
+
+.ft-info-qrcode dd {
+  width: 100px;
+  display: inline;
+  margin-left: 30px;
+  float: right;
+  text-align: center;
+}
+
+.ft-info-qrcode dd span {
+  display: block;
+  height: 90px;
+  margin: 0 0 8px 6px;
+}
+
+.ft-info-qrcode dd .ft-qrcode-tejia {
+  background: url("../images/icon/qr_tejia4.png") no-repeat;
+}
+
+.ft-info-qrcode dd .ft-qrcode-weixin {
+  background: url("../images/icon/qr_mfw4.gif") no-repeat;
+}
+
+.ft-info-social {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.ft-info-social::before {
+  content: '';
+  clear: both;
+  height: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.ft-info-social dt {
+  font-size: 16px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.ft-info-social dd {
+  padding: 5px 0;
+}
+
+.ft-info-social dd a {
+  display: inline-block;
+  margin: 0 6px;
+  color: #c2c2c2;
+}
+
+.ft-info-social dd a i {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  overflow: hidden;
+  background: url("../images/icon/mfw-footer-sprite5.png") no-repeat;
+}
+
+.ft-info-social dd .ft-social-weibo i {
+  background-position: 0 0;
+}
+
+.ft-info-social dd .ft-social-qqt i {
+  background-position: -30px 0;
+}
+
+.ft-info-social dd .ft-social-qzone i {
+  background-position: -60px 0;
+}
+
+.ft-links {
+  margin-top: -1px;
+  border-top: 1px solid #575a5b;
+  border-bottom: 1px solid #575a5b;
+  padding: 17px 0 17px 8px;
+}
+
+.ft-links a {
+  display: inline-block;
+  margin-right: 12px;
+  color: #c2c2c2;
+}
+
+.ft-links a:hover {
+  color: white;
+}
+
+.ft-copyright {
+  padding: 12px 0;
+  margin-top: -1px;
+  border-top: 1px solid #575a5b;
+}
+
+.ft-copyright .ft-mfw-logo {
+  float: left;
+}
+
+.ft-copyright .ft-mfw-logo i {
+  background: url("../images/icon/mfw-footer-sprite5.png") no-repeat 0 -30px;
+  margin: 2px 20px 0 0;
+  width: 136px;
+  height: 39px;
+  display: inline-block;
+}
+
+.ft-copyright p {
+  font-size: 12px;
+  color: #c2c2c2;
+}
+
+.ft-copyright p a {
+  color: #c2c2c2;
+}
+
+.ft-copyright p a:hover {
+  color: white;
+}
+
+.ft-copyright p .highlight {
+  color: #ff9d00 !important;
+}
+
+.ft-copyright .f {
+  float: right;
+  margin-left: 10px;
+  width: 90px;
+  height: 30px;
+  background: url("../images/icon/mfw-footer-sprite5.png") no-repeat;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.ft-copyright .f1 {
+  background-position: 0 -70px;
+}
+
+.ft-copyright .f2 {
+  background-position: 0 -110px;
+}
+
+.ft-copyright .f3 {
+  background-position: 0 -150px;
 }

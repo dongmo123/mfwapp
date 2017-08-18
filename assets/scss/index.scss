@@ -8,6 +8,13 @@
     display: flex;
     justify-content:space-between;
 }
+@mixin clearfix{
+    content: '';
+    clear: both;
+    height: 0;
+    display: block;
+    overflow: hidden;
+}
 @mixin icon-caret-down {
     display: inline-block;
     height: 0;
@@ -1029,19 +1036,21 @@ a {
                         line-height:26px;
                         margin-bottom:10px;
                         font-size:18px;
+                        position:relative;
                         a{
-                            width: 420px;
+                            width: 400px;
                             height: 26px;
                             display: block;
-                            //float:left;
                             color: #333;
                             overflow: hidden;
                             white-space: nowrap;
                             text-overflow: ellipsis;
                         }
                         .tn-from-app {
-                            float: right;
-                            width: auto;
+                            position:absolute;
+                            right:0px;
+                            top:0px;
+                            width: 44px;
                             padding: 0 7px;
                             border: 1px solid #ff9d00;
                             border-radius: 11px;
@@ -1053,7 +1062,6 @@ a {
                             overflow: visible;
                             background-color: #fff;
                             cursor: text;
-                            position:absolute;
                             i{
                                 float: left;
                                 margin: 2px;
@@ -1062,13 +1070,20 @@ a {
                                 background: url('../images/icon/index-sprites9.png') no-repeat -170px 0;
                             }
                             img{
-                                position: absolute;
-                                right: -5px;
-                                top: 0;
-                                padding-top: 25px;
-                                width: 125px;
-                                display: none;
+                                position:absolute;
+                                top:25px;
+                                right:-4px;
+                                display:none;
+                                width:125px;
+                                height:175px;
+                                z-index:11;
                             }
+                            &:hover{
+                                img{
+                                    display:block;
+                                }
+                            }
+
                         }
                     }
                     dd{
@@ -1160,5 +1175,252 @@ a {
                 }
             }
         }
+    }
+}
+.m-pagination{
+    padding: 20px 5px;
+    line-height: 24px;
+    text-align: right;
+    font-size: 12px;
+    color: #999;
+    .count{
+        padding-right:12px;
+    }
+    .pg-current,.pg-next{
+        background-color:#ff9d00;
+        display:inline-block;
+        margin-right:5px;
+        border-radius:4px;
+        color:#fff;
+        vertical-align:middle;
+        padding: 0 7px;
+    }
+    .pi{
+        display: inline-block;
+        margin-right: 1px;
+        padding: 0 7px;
+        margin-left: 1px;
+        padding: 0 7px;
+        border: 0 none;
+        background: 0;
+        border-radius: 4px;
+        color: #666;
+        vertical-align: middle;
+        &:hover{
+            background-color:#EFEFEF;
+        }
+    }
+    .pg-next{
+        margin-right:0;
+        &:hover{
+            background-color:#FF8A00;
+        }
+    }
+}
+.content{
+    overflow:hidden;
+}
+.footer{
+    background-color:#3C3C3C;
+    width:100%;
+    color: #c2c2c2;
+    line-height: 22px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    overflow:hidden;
+
+    .ft-content{
+        width:1000px;
+        margin:0 auto;
+        .ft-info{
+            padding:30px 8px 40px 8px;
+            border-bottom:1px solid #575a5b;
+        }
+    }
+}
+.ft-info{
+    overflow:hidden;
+    .ft-info-col{
+        float:left;
+        display:inline;
+    }
+    .ft-info-intro{
+        width: 200px;
+        margin-right: 68px;
+    }
+    dt{
+        height:30px;
+        font-size:14px;
+        overflow:hidden
+    }
+    strong{
+        color:#ff9d00;
+        font-weight:normal;
+    }
+    .ft-info-about{
+        width: 128px;
+        margin-right: 85px;
+        a{
+            color: #c2c2c2;
+            &:hover{
+                color:white;
+            }
+        }
+    }
+    .ft-info-service{
+        width: 135px;
+        margin-right: 80px;
+        dt{
+            text-align:center;
+            height:30px;
+        }
+        dd{
+            overflow:hidden;
+            margin-right: -35px;
+            ul{
+                li{
+                    float:left;
+                    width:85px;
+                    a{
+                        color:#c2c2c2;
+                        &:hover{
+                            color:white;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .highlight{
+        color:#ff9d00 !important;
+    }
+    .ft-info-qrcode{
+        float: right;
+        padding-top: 22px;
+        line-height: 1.4em;
+    }
+    .ft-info-social{
+        clear: both;
+        text-align: center;
+        padding-top: 25px;
+    }
+}
+.ft-info-qrcode{
+    float:right;
+    padding-top:22px;
+    dd{
+        width: 100px;
+        display: inline;
+        margin-left: 30px;
+        float: right;
+        text-align: center;
+        span{
+            display: block;
+            height: 90px;
+            margin: 0 0 8px 6px;
+        }
+        .ft-qrcode-tejia{
+            background: url('../images/icon/qr_tejia4.png') no-repeat;
+        }
+        .ft-qrcode-weixin{
+            background: url('../images/icon/qr_mfw4.gif') no-repeat;
+        }
+    }
+}
+.ft-info-social{
+    text-align: center;
+    padding-top: 25px;
+    &::before{
+        @include clearfix;
+    }
+    dt{
+        font-size: 16px;
+        height:30px;
+        overflow:hidden;
+    }
+    dd{
+        padding:5px 0;
+        a{
+            display:inline-block;
+            margin:0 6px;
+            color:#c2c2c2;
+            i{
+                display: inline-block;
+                width: 28px;
+                height: 28px;
+                overflow:hidden;
+                background: url('../images/icon/mfw-footer-sprite5.png') no-repeat;
+            }
+        }
+        .ft-social-weibo{
+            i{background-position: 0 0;}
+        }
+        .ft-social-qqt{
+            i{background-position: -30px 0;}
+        }
+        .ft-social-qzone{
+            i{background-position: -60px 0;}
+        }
+    }
+}
+.ft-links{
+    margin-top: -1px;
+    border-top: 1px solid #575a5b;
+    border-bottom: 1px solid #575a5b;
+    padding: 17px 0 17px 8px;
+    a{
+        display: inline-block;
+        margin-right: 12px;
+        color: #c2c2c2;
+        &:hover{
+            color:white;
+        }
+    }
+}
+.ft-copyright{
+    padding: 12px 0;
+    margin-top: -1px;
+    border-top: 1px solid #575a5b;
+    .ft-mfw-logo{
+        float:left;
+        i{
+            background: url('../images/icon/mfw-footer-sprite5.png') no-repeat 0 -30px;
+            margin:2px 20px 0 0;
+            width:136px;
+            height:39px;
+            display:inline-block;
+        }
+    }
+    p{
+        font-size:12px;
+        color:#c2c2c2;
+        a{
+            color:#c2c2c2;
+            &:hover{
+                color:white;
+            }
+        }
+        .highlight{
+            color:#ff9d00 !important;
+        }
+    }
+    .f{
+        float: right;
+        margin-left: 10px;
+        width: 90px;
+        height: 30px;
+        background: url('../images/icon/mfw-footer-sprite5.png') no-repeat;
+        overflow: hidden;
+        display:inline-block;
+    }
+    .f1{
+        background-position:0 -70px;
+    }
+    .f2{
+        background-position:0 -110px;
+    }
+    .f3{
+        background-position:0 -150px;
     }
 }

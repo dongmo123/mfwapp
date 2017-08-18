@@ -114,10 +114,6 @@ $(function() {
         $(this).children('.scrollBar').stop().animate({
             opacity: 0.8
         }, 400);
-        /*阻止浏览器滚动条默认滑动*/
-        $('body').on('mousewheel', function(event) {
-            return false;
-        });
     }, function() {
         $(this).children('.scrollBar').stop().animate({
             opacity: 0
@@ -126,6 +122,7 @@ $(function() {
 
     $('#activitynav').on('mousewheel', function(event) {
         //console.log(event.deltaX, event.deltaY, event.deltaFactor);
+        event.preventDefault();
         var Top = parseInt($(this).children('ul').css('top'));
         var sTop = parseInt($(this).children('div').css('top'));
         var maxTop = $(this).children('ul').height() - $(this).height();
