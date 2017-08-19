@@ -42,13 +42,5 @@ $(function() {
         $('.tn-list').append(userstr);
     });
 
-    /*读取footer links数据*/
-    /*$.get('assets/js/linksdata.json', function(data) {
-        var linksstr = '';
-        for (var i = 0; i < data.length; i++) {
-            linksstr = `<a href="${data[i].url}" title="">${data[i].name}</a>`;
-        }
-        $('.ft-links').append(linksstr);
-    });*/
 
 });

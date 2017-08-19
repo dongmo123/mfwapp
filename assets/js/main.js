@@ -241,4 +241,38 @@ $(function() {
         });
     });
 
+    /*随机切换注册页背景*/
+    function random(n, m) {
+        return Math.floor(Math.random() * (n - m + 1) + m);
+    }
+    $('.fullscreen-bg').css('background-image', 'url(assets/images/uploads/regbg/' + random(1, 7) + '.jpg)');
+    /*限制窗口大小*/
+    /*$(window).resize(function() {
+        $('body').width(900);
+    });*/
+    /*$(window).resize(function() {
+        if ($(window).width() < 700) {
+            $(window).resizeTo(document.body.clientWidth, 300);
+        }
+    });*/
+
+
+    /*注册表单控制*/
+    $('.checkphone').click(function() {
+        $('.inner').hide(200);
+        $('.bottom-link').hide(200);
+        $('.add-info').show(200);
+    });
+    $('.bottom-link a').click(function() {
+        console.log($(this).attr('data-type'));
+        if ($(this).attr('data-type') == 0) {
+            $('.bottom-link').html('还没有账号?<a href="#" data-type="1">马上注册</a>');
+            $('#signup_form').hide(0);
+            $('#login_form').show(0);
+        } else {
+            $('.bottom-link').html('还没有账号?<a href="#" data-type="0">马上注册</a>');
+            $('#signup_form').show(0);
+            $('#login_form').hide(0);
+        }
+    });
 });
