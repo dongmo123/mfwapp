@@ -275,4 +275,73 @@ $(function() {
             $('#login_form').hide(0);
         }
     });
+
+
+    /*list.html*/
+    /*header input*/
+    $('#head_search_input').focus(function() {
+        console.log($('.icon-search'));
+        $(this).stop().animate({
+                width: '380px'
+            },
+            200);
+        $('.icon-search').css('background-position', '-30px -140px')
+    });
+    $('#head_search_input').blur(function() {
+        $(this).stop().animate({
+                width: '108px'
+            },
+            100);
+        $('.icon-search').css('background-position', '-30px -110px')
+    });
+    /*hover 变色*/
+    $('.list-header').hover(function() {
+        $('.head-nav').removeClass('wcolor');
+        $('.head-logo a').attr('class', 'mfw-logo');
+    }, function() {
+        $('.head-nav').addClass('wcolor');
+        $('.head-logo a').attr('class', 'mfw-logo-list');
+    });
+
+    /*header 右下脚滑动动画*/
+    $('.pic-from').hover(function() {
+        //console.log($('.pic-from-pop')[0].scrollWidth);
+        $('.pic-from-pop').css('visibility', 'visible').animate({
+            width: $('.pic-from-pop')[0].scrollWidth + 'px'
+        }, 200);
+    }, function() {
+        $('.pic-from-pop').animate({
+            width: '0px'
+        }, 200, function() {
+            $('.pic-from-pop').css('visibility', 'hidden')
+        });
+    });
+
+    /*热门目的地*/
+    $('.list-hot .r-navbar a').mouseenter(function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $(this).addClass('on').siblings().removeClass('on');
+        $('.list-hot .hot-list').eq($(this).index() / 2).removeClass('hide').siblings().addClass('hide');
+    });
+
+    /*list seasonmmds tiles*/
+
+    $('.row-season .r-navbar a').mouseenter(function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $(this).addClass('on').siblings().removeClass('on');
+        $('.row-season .seasonmmds .tiles').eq($(this).index() / 2).css('display', 'block').siblings().css('display', 'none');
+    });
+
+    /*list catemdds tiles*/
+    $('.row-theme .r-navbar a').mouseenter(function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $(this).addClass('on').siblings().removeClass('on');
+        $('.row-theme .catemdds .tiles').eq($(this).index() / 2).css('display', 'block').siblings().css('display', 'none');
+    });
+
+
+
 });
