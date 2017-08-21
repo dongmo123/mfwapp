@@ -263,7 +263,8 @@ $(function() {
         $('.bottom-link').hide(200);
         $('.add-info').show(200);
     });
-    $('.bottom-link a').click(function() {
+    $('.bottom-link a').click(function(e) {
+        console.log(e)
         console.log($(this).attr('data-type'));
         if ($(this).attr('data-type') == 0) {
             $('.bottom-link').html('还没有账号?<a href="#" data-type="1">马上注册</a>');
@@ -280,14 +281,19 @@ $(function() {
     /*list.html*/
     /*header input*/
     $('#head_search_input').focus(function() {
-        console.log($('.icon-search'));
+        $('.head-search-wrapper').css({
+            width: '380px'
+        });
         $(this).stop().animate({
                 width: '380px'
             },
             200);
-        $('.icon-search').css('background-position', '-30px -140px')
+        $('.icon-search').css('background-position', '-30px -140px');
     });
     $('#head_search_input').blur(function() {
+        $('.head-search-wrapper').css({
+            width: '108px'
+        });
         $(this).stop().animate({
                 width: '108px'
             },
@@ -342,6 +348,81 @@ $(function() {
         $('.row-theme .catemdds .tiles').eq($(this).index() / 2).css('display', 'block').siblings().css('display', 'none');
     });
 
+    /*下拉*/
+    $('.show-arrdown').click(function() {
+        $('body').animate({
+            scrollTop: $('.header').height()
+        }, 500);
+        return false;
+    });
 
+    /*旅游攻略页面*/
+    /*left nav*/
+    $('.nav-item').hover(function() {
+        $('.gonglve-nav').css('border-right-color', '#fff');
+        $('.nav-item .nav-panel').eq($(this).index()).css('display', 'block');
+    }, function() {
+        $('.gonglve-nav').css('border-right-color', '#ddd');
+        $('.nav-panel').css('display', 'none');
+    });
+
+    /*攻略页无缝轮播*/
+    slider_gl();
+
+    function slider_gl() {
+        var firstimg = $('#slide_box li').first().clone();
+        $('#slide_box').append(firstimg).width($('#slide_box li').length * $('#slide_box img').width());
+        var imgWidth = $('#slide_box>li>a>img').width();
+        var i = 0;
+        var timer = null;
+        autoPlay();
+
+        function autoPlay() {
+            timer = setInterval(function() {
+                i++;
+                moveimg();
+            }, 4000);
+        }
+
+        function moveimg() {
+            //如果是最后一张图片
+            if (i == $('#slide_box li').length) {
+                i = 1;
+                $('#slide_box').css('left', '0px');
+            }
+            //移动图片
+            $('#slide_box').stop().animate({
+                left: i * -imgWidth
+            }, 400);
+            $('#thumb_box li').removeClass('on').eq(i).addClass('on');
+            if (i == $('#thumb_box li').length) {
+                $('#thumb_box li').removeClass('on').eq(0).addClass('on');
+            }
+        }
+        //鼠标移入div之后，停止计时器
+        $('#slide_box li').hover(function() {
+            console.log('shubiaoyiru');
+            clearInterval(timer);
+        }, function() {
+            autoPlay();
+        });
+
+        $('#thumb_box li').click(function() {
+            i = $(this).index();
+            moveimg();
+        });
+
+    }
+
+    /*gonglve_wrap*/
+    $('.gonglve_wrap .tit').click(function() {
+        var index = $(this).parent().index();
+        // console.log($('.gonglve_wrap .drop-item').eq(index).attr('data-open'));
+        if ($('.gonglve_wrap .drop-item').eq(index).attr('data-open') == 'close') {
+            $('.gonglve_wrap .drop-item').eq(index).addClass('drop-open').attr('data-open', 'open').siblings().removeClass('drop-open').attr('data-open', 'close');
+        } else {
+            $('.gonglve_wrap .drop-item').eq(index).removeClass('drop-open').attr('data-open', 'close').siblings().removeClass('drop-open').attr('data-open', 'close');
+        }
+    });
 
 });

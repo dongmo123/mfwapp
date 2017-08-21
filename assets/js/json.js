@@ -150,6 +150,18 @@ $(function() {
         }
         list += `</div>`;
         $('.row-theme .catemdds').append(list);
+
+
+
     });
 
+    $('.page_loader').click(function() {
+        $(this).html('加载中. . .');
+        $(this).mouseout(function(event) {
+            $(this).css('background-color', '#efefef')
+        });;
+        var gong = '';
+
+        $('.gl-post>div').append(gong);
+    });
 });
