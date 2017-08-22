@@ -425,4 +425,126 @@ $(function() {
         }
     });
 
+
+    /*sales.html*/
+    $('#sales-xxk li').click(function() {
+        var index = $(this).index();
+        console.log(index);
+        $(this).addClass('on').siblings().removeClass('on');
+        $('.letter-content ul').eq(index).addClass('show').siblings().removeClass('show')
+    });
+    $('#j-insertc a').click(function() {
+        var value = $(this).text();
+        // console.log(value);
+        $('.trigger strong').html(value);
+        return false;
+    });
+    $('.trigger').click(function() {
+        if ($(this).attr('data-state') == 'close') {
+            $(this).attr('data-state', 'open');
+            $('#j-insertc').addClass('show');
+        } else {
+            $('#j-insertc').removeClass('show');
+            $(this).attr('data-state', 'close');
+        }
+    });
+    $('#search-sales').focus(function() {
+        $('.city-panel').addClass('show');
+        $('#j-insertc').removeClass('show');
+        $('.trigger').attr('data-state', 'close');
+    });
+    $('#search-sales').blur(function() {
+        $('.city-panel').removeClass('show');
+    });
+    /*$('#mdd-insert a').click(function() {
+        console.log(32);
+        var value = $(this).text();
+        console.log(value);
+        $('#search-sales').value(value);
+        // return false;
+    });*/
+
+
+    $('#j_category .item').hover(function() {
+        $('.category-outer').show(0);
+        $(this).addClass('hover');
+    }, function() {
+        var index = $(this).index();
+        $(this).removeClass('hover');
+        $('.category-outer').hide(0);
+    });
+    $('.category-outer').mouseout(function() {
+        $('.category-outer').hide(0);
+        $(this).removeClass('hover');
+    });
+
+
+    /*carousel 轮播图>>>>>>>*/
+    $('#carimgs').append($('#carimgs li').first().clone()).width($('#carimgs li').length * $('#carimgs li').width());
+    carousel();
+
+    function carousel() {
+        var i = 0;
+        var run = null;
+        autoplay();
+        var index = $('#carimgs li').length;
+        var carwidth = $('#carimgs li').width();
+
+        function autoplay() {
+            run = setInterval(function() {
+                i++;
+                move();
+            }, 5000);
+        }
+
+        function move() {
+            if (i == index) {
+                i = 1;
+                $('#carimgs').css('left', '0px');
+            }
+            $('#carimgs').stop().animate({
+                left: -i * carwidth
+            }, 600);
+            $('#diet li').removeClass('diet-active').eq(i).addClass('diet-active');
+            if (i == $('#diet li').length) {
+                $('#diet li').removeClass('diet-active').eq(0).addClass('diet-active');
+            }
+        }
+
+        //鼠标移入div之后，停止计时器
+        $('.carousel').hover(function() {
+            clearInterval(run);
+            $('#prev').show();
+            $('#next').show();
+        }, function() {
+            autoplay();
+            $('#prev').hide();
+            $('#next').hide();
+        });
+        $('#prev').click(function() {
+            if (i == 0) {
+                i = index - 1;
+                $('#carimgs').css('left', '-' + (index - 1) * carwidth + 'px');
+            }
+            i--;
+            move();
+        });
+        $('#next').click(function() {
+            i++;
+            move();
+        });
+        $('#diet li').click(function() {
+            i = $(this).index();
+            move();
+        });
+    }
+    /* /<<<<<carousel 轮播图*/
+
+
+    // 主题推荐hover
+    $('#layout .type2 .tab li').mouseenter(function() {
+        var index = $(this).index(0);
+        $(this).children('a').addClass('on1').end().siblings().children('a').removeClass('on1');
+        $('.mod-content .sales-cards').eq(index).addClass('show').siblings().removeClass('show');
+    });
 });

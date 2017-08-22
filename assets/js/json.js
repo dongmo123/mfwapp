@@ -155,6 +155,24 @@ $(function() {
 
     });
 
+    function random(n, m) {
+        return Math.floor(Math.random() * (n - m + 1) + m);
+    }
+    /*$('#tianchange').click(function() {
+        var numstr = {};
+        for (var i = 0; i < 4; i++) {
+            var index = random(0, 5);
+            console.log(i + '--' + index);
+            if (numstr.indexOf(index) !== -1) {
+                numstr[i] = index;
+                i++;
+            } else {
+                // i--;
+            }
+        }
+        console.log(numstr);
+    });*/
+
     $('.page_loader').click(function() {
         $(this).html('加载中. . .');
         $(this).mouseout(function(event) {
@@ -164,4 +182,6 @@ $(function() {
 
         $('.gl-post>div').append(gong);
     });
+
+
 });
