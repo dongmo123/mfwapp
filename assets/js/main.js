@@ -539,12 +539,80 @@ $(function() {
         });
     }
     /* /<<<<<carousel 轮播图*/
+    /*carousel2 轮播图>>>>>>> show.html*/
+    $('#carimgs2').append($('#carimgs2 li').first().clone()).width($('#carimgs2 li').length * $('#carimgs2 li').width());
+    carousel2();
 
+    function carousel2() {
+        var i = 0;
+        var run = null;
+        autoplay();
+        var index = $('#carimgs2 li').length;
+        var carwidth = $('#carimgs2 li').width();
+
+        function autoplay() {
+            run = setInterval(function() {
+                i++;
+                move();
+            }, 3000);
+        }
+
+        function move() {
+            if (i == index) {
+                i = 1;
+                $('#carimgs2').css('left', '0px');
+            }
+            $('#carimgs2').stop().animate({
+                left: -i * carwidth
+            }, 400);
+            $('#diet2 li').removeClass('diet-active').eq(i).addClass('diet-active');
+            if (i == $('#diet2 li').length) {
+                $('#diet2 li').removeClass('diet-active').eq(0).addClass('diet-active');
+            }
+        }
+
+        //鼠标移入div之后，停止计时器
+        $('.carousel').hover(function() {
+            clearInterval(run);
+            $('#prev2').show();
+            $('#next2').show();
+        }, function() {
+            autoplay();
+            $('#prev2').hide();
+            $('#next2').hide();
+        });
+        $('#prev2').click(function() {
+            if (i == 0) {
+                i = index - 1;
+                $('#carimgs2').css('left', '-' + (index - 1) * carwidth + 'px');
+            }
+            i--;
+            move();
+        });
+        $('#next2').click(function() {
+            i++;
+            move();
+        });
+    }
+    /* /<<<<<carousel 轮播图*/
 
     // 主题推荐hover
     $('#layout .type2 .tab li').mouseenter(function() {
         var index = $(this).index(0);
         $(this).children('a').addClass('on1').end().siblings().children('a').removeClass('on1');
         $('.mod-content .sales-cards').eq(index).addClass('show').siblings().removeClass('show');
+    });
+
+    $('#calender_wrap .tab-box ul').css('width', ($('#calender_wrap .tab-box li').width() + 35) * $('#calender_wrap .tab-box ul li').length + 'px');
+    /*if ($('#calender_wrap .cal-tab').offset().left == 0) {
+        $('#calender_wrap .tab-arrleft').hide();
+    }else{
+
+    }*/
+    $('#calender_wrap .border').click(function() {
+        $(this).css('border', '0').parent().addClass('on');
+    });
+    $('#stock_wrap .tj-type a').click(function() {
+        $(this).addClass('on').siblings().removeClass('on');
     });
 });

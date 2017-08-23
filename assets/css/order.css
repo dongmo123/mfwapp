@@ -1,0 +1,700 @@
+.orderhtml .crumb {
+  height: 20px;
+  padding: 15px 10px;
+  color: #666;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.orderhtml .crumb .item {
+  float: left;
+}
+
+.orderhtml .crumb .crumb-index {
+  color: #ff9d00;
+  font-size: 12px;
+}
+
+.orderhtml .crumb .crumb-index:hover {
+  text-decoration: underline;
+}
+
+.orderhtml .crumb em {
+  margin: 0 6px;
+  color: #999;
+  font-family: 'simsun';
+  font-style: normal;
+}
+
+.orderhtml .crumb .drop {
+  float: left;
+  position: relative;
+  font-size: 12px;
+  height: 26px;
+}
+
+.orderhtml .crumb .drop:hover .bd {
+  display: block;
+}
+
+.orderhtml .crumb .drop:hover .hd > a {
+  background-color: #FF7000;
+  color: #fff;
+}
+
+.orderhtml .crumb .drop:hover .hd > a i {
+  border-top-color: #fff;
+}
+
+.orderhtml .crumb .drop .hd a {
+  display: block;
+  height: 20px;
+  float: left;
+  padding: 0 20px 0 5px;
+  color: #666;
+}
+
+.orderhtml .crumb .drop .hd a i {
+  position: absolute;
+  margin: 8px 0 0 6px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #ff7000;
+  border-left: 5px dashed transparent;
+  border-right: 5px dashed transparent;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.orderhtml .crumb .drop .hd a:hover {
+  background-color: #FF7000;
+  color: #fff;
+}
+
+.orderhtml .crumb .drop .hd a:hover i {
+  border-top-color: #fff;
+}
+
+.orderhtml .crumb .drop .bd {
+  position: absolute;
+  display: none;
+  margin: 5px 0 0 0;
+  z-index: 10;
+  width: 100px;
+  padding: 10px 7px 8px 7px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  top: 20px;
+}
+
+.orderhtml .crumb .drop .bd ul li {
+  margin-bottom: 4px;
+  height: 21px;
+  line-height: 20px;
+  overflow: hidden;
+}
+
+.orderhtml .crumb .drop .bd ul li a {
+  display: block;
+  height: 21px;
+  padding: 0 7px;
+  color: #333;
+  width: 100%;
+}
+
+.orderhtml .crumb .drop .bd ul li a:hover {
+  background-color: #fff1d7;
+  color: #ff7000;
+  text-decoration: none;
+}
+
+.orderhtml .crumb .drop .arrow {
+  position: absolute;
+  left: 6px;
+  top: -3px;
+  width: 4px;
+  height: 4px;
+  border-bottom: 1px solid #E5E5E5;
+  border-left: 1px solid #E5E5E5;
+  background-color: #fff;
+  font-size: 0;
+  overflow: hidden;
+  transform: rotate(135deg);
+}
+
+.orderhtml .crumb > a {
+  color: #666;
+}
+
+.orderhtml .crumb > a:hover {
+  text-decoration: underline;
+}
+
+.orderhtml .sales-intro {
+  margin-bottom: 40px;
+}
+
+.orderhtml .intro-l {
+  float: left;
+  width: 440px;
+}
+
+.orderhtml .sales-photo {
+  margin-bottom: 15px;
+  position: relative;
+  width: 440px;
+  height: 260px;
+  overflow: hidden;
+}
+
+.orderhtml .sales-photo .carousel {
+  width: 440px;
+  height: 260px;
+}
+
+.orderhtml .sales-photo .carousel li {
+  width: 440px;
+  height: 260px;
+}
+
+.orderhtml .sales-photo .carousel img {
+  width: 440px;
+}
+
+.orderhtml .sales-photo .carousel .carimgs {
+  height: 260px;
+}
+
+.orderhtml .sales-photo .carousel .cir {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  text-align: center;
+  z-index: 10;
+}
+
+.orderhtml .sales-photo .carousel .cir li {
+  display: inline-block;
+  margin: 0 2px 0 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: .3;
+  cursor: pointer;
+}
+
+.orderhtml .sales-photo .carousel .cir .diet-active {
+  opacity: 1;
+}
+
+.orderhtml .sales-photo .carousel .sales-id {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: default;
+  text-decoration: none;
+  line-height: 24px;
+  font-size: 12px;
+  padding: 0 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  z-index: 11;
+}
+
+.sales-calendar {
+  margin-bottom: 10px;
+}
+
+.sales-calendar .cal-month {
+  height: 28px;
+  position: relative;
+  margin-bottom: 3px;
+}
+
+.sales-calendar .tab-arrow {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sales-calendar .tab-arrow i {
+  display: inline-block;
+  margin-top: 5px;
+  width: 9px;
+  height: 16px;
+  background: url("../images/icon/detail-v4-sprites11.png") no-repeat 0 0;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.sales-calendar .tab-arrow:hover {
+  background-color: #fff;
+}
+
+.sales-calendar .tab-arrleft {
+  left: 0px;
+  display: none;
+}
+
+.sales-calendar .tab-arrright {
+  right: 0px;
+}
+
+.sales-calendar .tab-arrright i {
+  background-position: -20px 0;
+}
+
+.sales-calendar .cal-tab {
+  position: absolute;
+  margin: 0 50px;
+  height: 34px;
+  overflow: hidden;
+}
+
+.sales-calendar .cal-tab ul {
+  font-size: 14px;
+  line-height: 28px;
+  min-width: 90px;
+  height: 34px;
+}
+
+.sales-calendar .cal-tab ul li {
+  float: left;
+  color: #999;
+  width: 90px;
+  text-align: center;
+  margin-right: 35px;
+}
+
+.sales-calendar .cal-tab ul li a {
+  color: #333;
+}
+
+.sales-calendar .cal-tab ul li a:hover {
+  text-decoration: underline;
+}
+
+.sales-calendar .cal-tab ul .on {
+  padding-bottom: 3px;
+  border-bottom: 3px solid #ff9d00;
+}
+
+.sales-calendar .cal-day .week {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  padding: 0 3px;
+  background-color: #f6f6f6;
+}
+
+.sales-calendar .cal-day .week li {
+  float: left;
+  width: 62px;
+  cursor: default;
+}
+
+.sales-calendar .cal-day .list {
+  border: 1px solid #ededed;
+  border-top: 0 none;
+  text-align: center;
+  padding: 1px 2px;
+}
+
+.sales-calendar .cal-day .list ul {
+  margin-right: -5px;
+}
+
+.sales-calendar .cal-day .list li {
+  float: left;
+  display: inline-block;
+  margin: 1px 2px;
+  width: 58px;
+  height: 48px;
+  position: relative;
+}
+
+.sales-calendar .cal-day .list li:hover .border {
+  border: 1px solid #ff9d00;
+}
+
+.sales-calendar .cal-day .list .on {
+  background: #ff9d00;
+}
+
+.sales-calendar .cal-day .list .on .day, .sales-calendar .cal-day .list .on .remain {
+  color: #ffeccd;
+}
+
+.sales-calendar .cal-day .list .on .pro {
+  color: #fff;
+}
+
+.sales-calendar .cal-day .day {
+  padding-top: 5px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #999;
+}
+
+.sales-calendar .cal-day .pro {
+  font-size: 12px;
+  color: #ff6f00;
+  line-height: 12px;
+}
+
+.sales-calendar .cal-day .pro .remain {
+  color: #999;
+}
+
+.sales-calendar .cal-day .border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  border: 1px solid #d7d7d7;
+}
+
+.sales-intro .l-ft {
+  line-height: 20px;
+}
+
+.sales-intro .tuan {
+  float: right;
+  font-size: 12px;
+  color: #666;
+}
+
+.sales-intro .btn-collect {
+  float: left;
+  margin-right: 25px;
+  font-size: 14px;
+  color: #666;
+}
+
+.sales-intro .btn-collect i {
+  float: left;
+  margin: 0 8px 0 0;
+  width: 18px;
+  height: 18px;
+  background: url("../images/icon/detail-v4-sprites11.png") no-repeat 0 -40px;
+  overflow: hidden;
+}
+
+.sales-intro .btn-collect:hover {
+  text-decoration: underline;
+}
+
+.sales-intro .share {
+  float: left;
+  font-size: 14px;
+  color: #666;
+  position: relative;
+  height: 30px;
+}
+
+.sales-intro .share a {
+  color: #666;
+}
+
+.sales-intro .share:hover a {
+  text-decoration: underline;
+}
+
+.sales-intro .share:hover .share-icon {
+  display: block;
+}
+
+.sales-intro .share i {
+  float: left;
+  margin: 0 8px 0 0;
+  background: url("../images/icon/detail-v4-sprites11.png") no-repeat -20px -40px;
+  overflow: hidden;
+  margin-top: 1px;
+  width: 16px;
+  height: 17px;
+}
+
+.sales-intro .share-icon {
+  height: 32px;
+  padding: 12px 10px 12px 15px;
+  width: 131px;
+  left: -54px;
+  top: 35px;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  position: absolute;
+  box-shadow: 0 0 7px rgba(213, 213, 213, 0.7);
+  z-index: 101;
+}
+
+.sales-intro .share-icon .i-arrow {
+  position: absolute;
+  top: -7px;
+  width: 11px;
+  height: 7px;
+  background: url("../images/icon/detail-v4-sprites11.png") no-repeat -60px -20px;
+  overflow: hidden;
+}
+
+.sales-intro .share-icon .i-arrCenter {
+  left: 50%;
+  margin-left: -6px;
+}
+
+.sales-intro .share-icon a {
+  display: inline-block;
+  float: left;
+  margin: 0 5px;
+  width: 32px;
+  height: 32px;
+  background: url("../images/icon/detail-v4-sprites11.png") no-repeat 0 -100px;
+}
+
+.sales-intro .share-icon .s-weibo {
+  background-position: 0 -100px;
+}
+
+.sales-intro .share-icon .s-qzone {
+  background-position: -40px -100px;
+}
+
+.sales-intro .share-icon .s-weixin {
+  background-position: -120px -100px;
+}
+
+.sales-intro .intro-r {
+  float: right;
+  width: 540px;
+}
+
+.sales-intro .sales-title {
+  margin-bottom: 10px;
+}
+
+.sales-intro .sales-title h1 {
+  font-size: 22px;
+  color: #333;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.sales-intro .sales-title .s-label {
+  margin-top: 7px;
+}
+
+.sales-intro .sales-title .s-label li {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  border: 1px dashed #ff7000;
+  color: #ff7000;
+  line-height: 18px;
+  padding: 0 6px;
+}
+
+.sales-intro .price-panel {
+  padding: 15px 20px;
+  background-color: #f6f6f6;
+  font-size: 12px;
+  color: #999;
+}
+
+.sales-intro .price-panel .item-price {
+  padding: 0 15px 0 0;
+  float: left;
+}
+
+.sales-intro .price-panel .item-price > em {
+  font-size: 18px;
+  color: #ff6f00;
+  font-family: "Microsoft Yahei";
+  font-style: normal;
+}
+
+.sales-intro .price-panel .item-price > strong {
+  font-size: 34px;
+  color: #ff6f00;
+  font-family: "Tahoma";
+  font-weight: normal;
+}
+
+.sales-intro .price-panel .item-price > span {
+  position: relative;
+  display: inline-block;
+  left: 5px;
+  top: 0;
+}
+
+.sales-intro .price-panel .item-price > span:hover span {
+  display: inline-block;
+}
+
+.sales-intro .price-panel .item-price > span > a {
+  color: #ff9d00;
+}
+
+.sales-intro .price-panel .item-price > span > a:hover {
+  text-decoration: underline;
+}
+
+.sales-intro .price-panel .item-price > span > span {
+  position: absolute;
+  left: 100%;
+  top: 150%;
+  width: 200px;
+  padding: 5px 5px;
+  display: none;
+  background-color: #fff;
+  outline: 1px solid #e5e5e5;
+  font-size: 12px;
+  color: #333;
+  box-shadow: 0 0 7px rgba(213, 213, 213, 0.7);
+  z-index: 10;
+}
+
+.sales-intro .price-panel .item-price > div {
+  float: right;
+  margin: 20px 20px 0 70px;
+}
+
+.sales-intro .label {
+  float: left;
+  width: 70px;
+  padding-left: 5px;
+  color: #999;
+  font-size: 12px;
+}
+
+.sales-intro .info-promo {
+  margin: 15px 0;
+  line-height: 20px;
+}
+
+.sales-intro .info-promo .promo-bd {
+  float: left;
+  width: 400px;
+  position: relative;
+}
+
+.sales-intro .info-promo .promo-bd:hover > div {
+  display: block;
+}
+
+.sales-intro .info-promo .promo-bd > span {
+  color: #fff;
+  padding: 0 6px;
+  margin-right: 7px;
+  background-color: #ff9d00;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.sales-intro .info-promo .promo-bd > div {
+  width: 300px;
+  text-align: center;
+  left: -100px;
+  bottom: -58px;
+  color: #000;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  position: absolute;
+  box-shadow: 0 0 7px rgba(213, 213, 213, 0.7);
+  z-index: 101;
+}
+
+.sales-intro .info-promo .promo-bd > div i {
+  position: absolute;
+  top: -7px;
+  width: 11px;
+  height: 7px;
+  background: url("../images/icon/detail-v4-sprites11.png") no-repeat -60px -20px;
+  overflow: hidden;
+  left: 50%;
+  margin-left: -6px;
+}
+
+.sales-intro .info-promo .promo-bd > div p {
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.sales-intro .info-promo .promo-bd > div p span {
+  color: #f04040;
+  font-weight: bold;
+}
+
+.sales-intro .info-tips {
+  margin: 15px 0;
+  line-height: 20px;
+}
+
+.sales-intro .info-tips-box {
+  float: left;
+  width: 465px;
+  font-size: 12px;
+}
+
+.sales-intro .r-line {
+  margin: 20px 0;
+  border-bottom: 1px dotted #d6d6d6;
+  height: 0;
+  overflow: hidden;
+}
+
+.sales-intro .property-panel {
+  margin-bottom: 25px;
+}
+
+.sales-intro .tj-type {
+  line-height: 28px;
+}
+
+.sales-intro .tj-type a {
+  display: block;
+  float: left;
+  border: 1px solid #bcbcbc;
+  color: #333;
+  padding: 1px 10px;
+  position: relative;
+  line-height: 24px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.sales-intro .tj-type a i {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  background: url("../images/icon/detail-v4-sprites11.png") no-repeat -40px -40px;
+  overflow: hidden;
+  line-height: 200px;
+}
+
+.sales-intro .tj-type a:hover {
+  padding: 0 9px;
+  border: 1px solid #ff9d00;
+}
+
+.sales-intro .tj-type .on {
+  padding: 0 9px;
+  border: 1px solid #ff9d00;
+  text-decoration: none;
+}
+
+.sales-intro .tj-type .on i {
+  display: block;
+}
