@@ -168,39 +168,7 @@ $(function() {
         }, 500);
         return false;
     });
-    if ($('body').scrollTop() <= 500) {
-        $('#toolbar .top').css('display', 'none');
-    } else {
-        $('#toolbar .top').css('display', 'block');
-    }
-    $('body').on('mousewheel', function() {
-        if ($('body').scrollTop() <= 500) {
-            $('#toolbar .top').css('display', 'none');
-        } else {
-            $('#toolbar .top').css('display', 'block');
-        }
-    });
 
-    $(window).scroll(function() {
-        //toolbar();
-    });
-
-    function toolbar() {
-        var minbar = $(document).height() - $('#toolbar .toolbar-outer').offset().top;
-        var dtoflen = $(document).height() - $('.footer').height() - 180;
-        if (minbar <= 550) {
-            $('.toolbar-outer').css({
-                position: 'absolute',
-                top: dtoflen + 'px'
-            });
-        } else {
-            $('.toolbar-outer').css({
-                position: 'fixed',
-                top: 'auto'
-            });
-        }
-
-    }
     /*筛选点击事件*/
     $('.open-search').click(function(e) {
         $('#tn-dropdown-pop').css('display', 'block');
@@ -246,36 +214,15 @@ $(function() {
         return Math.floor(Math.random() * (n - m + 1) + m);
     }
     $('.fullscreen-bg').css('background-image', 'url(assets/images/uploads/regbg/' + random(1, 7) + '.jpg)');
-    /*限制窗口大小*/
-    /*$(window).resize(function() {
-        $('body').width(900);
-    });*/
-    /*$(window).resize(function() {
-        if ($(window).width() < 700) {
-            $(window).resizeTo(document.body.clientWidth, 300);
-        }
-    });*/
+    /*限制缩小窗口宽度大小*/
+
+    $(window).resize(function() {
+        console.log($(window).width());
+    });
 
 
     /*注册表单控制*/
-    $('.checkphone').click(function() {
-        $('.inner').hide(200);
-        $('.bottom-link').hide(200);
-        $('.add-info').show(200);
-    });
-    $('.bottom-link a').click(function(e) {
-        console.log(e)
-        console.log($(this).attr('data-type'));
-        if ($(this).attr('data-type') == 0) {
-            $('.bottom-link').html('还没有账号?<a href="#" data-type="1">马上注册</a>');
-            $('#signup_form').hide(0);
-            $('#login_form').show(0);
-        } else {
-            $('.bottom-link').html('还没有账号?<a href="#" data-type="0">马上注册</a>');
-            $('#signup_form').show(0);
-            $('#login_form').hide(0);
-        }
-    });
+
 
 
     /*list.html*/
@@ -612,7 +559,67 @@ $(function() {
     $('#calender_wrap .border').click(function() {
         $(this).css('border', '0').parent().addClass('on');
     });
-    $('#stock_wrap .tj-type a').click(function() {
+    $('#stock_wrap .tj-type dd>a').click(function() {
         $(this).addClass('on').siblings().removeClass('on');
+    });
+
+    /*详情页产品介绍*/
+    $('.detail-wrapper .tab li').click(function() {
+        $(this).addClass('on').siblings().removeClass('on');
+        $('.showflight').eq($(this).index()).removeClass('hide').siblings('.showflight').addClass('hide')
+    });
+    $('.m-reviews .tab li').click(function() {
+        if ($(this).attr('data-num') == 0) {
+            $('.empty-msg').removeClass('hide').siblings('.rev-list').addClass('hide')
+        } else {
+            $('.rev-list').removeClass('hide').siblings('.empty-msg').addClass('hide')
+        }
+    });
+    var $root = $('html, body');
+    $('a').click(function() {
+        if ($(this).attr('href').indexOf('#') == 0) {
+            $root.animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 500);
+            console.log();
+            return false;
+        }
+    });
+    /*所有 滚动条 绑定 锚点事件*/
+    toolbar();
+
+    function toolbar() {
+        var tt = $(window).scrollTop(),
+            toolbart = $('#toolbar').offset().top,
+            windowH = $(window).height(),
+            footerH = $('body>.footer').height(),
+            bodyH = $('body').height();
+        /*toolbar绑定设置*/
+        if (tt > (bodyH - windowH - footerH)) {
+            $('#toolbar .toolbar-outer').removeClass('toolbarfix');
+        } else {
+            $('#toolbar .toolbar-outer').addClass('toolbarfix');
+        }
+        /*toolbar返回顶点按钮是否消除*/
+        if (tt < 500) {
+            $('#toolbar .top').addClass('tophide');
+        } else {
+            $('#toolbar .top').removeClass('tophide');
+        }
+    }
+    $(window).scroll(function() {
+        toolbar();
+    });
+    $('.ui-bookdrop .trigger').click(function() {
+        if ($(this).parent().attr('class') == 'ui-bookdrop') {
+            $(this).parent().addClass('drop-open');
+        } else {
+            $(this).parent().removeClass('drop-open');
+        }
+    });
+    $('.s_popup .drop-menu li').click(function() {
+        console.log($(this).find('span'));
+        $(this).addClass('on').siblings().removeClass('on');
+        $(this).parent().parent().siblings('.trigger').children('span').text($(this).find('span').text()).parent().parent().removeClass('drop-open');
     });
 });

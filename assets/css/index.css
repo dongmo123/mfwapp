@@ -1658,7 +1658,7 @@ a {
 }
 
 .mfw-toolbar .toolbar-outer {
-  position: fixed;
+  position: absolute;
   right: 50%;
   bottom: 20px;
   height: auto;
@@ -1724,7 +1724,7 @@ a {
   margin-top: 13px;
 }
 
-.mfw-toolbar .toolbar-outer .top {
+.mfw-toolbar .toolbar-outer .tophide {
   display: none;
 }
 
@@ -1762,6 +1762,10 @@ a {
   display: none;
   padding: 6px;
   background-color: #fff;
+}
+
+.mfw-toolbar .toolbarfix {
+  position: fixed;
 }
 
 /* 筛选 */
@@ -2204,7 +2208,7 @@ a {
 }
 
 .reg-wrapper .container .signup-forms .add-info .form2-outer .vcode-input {
-  width: 174px;
+  width: 172px;
   float: right;
 }
 

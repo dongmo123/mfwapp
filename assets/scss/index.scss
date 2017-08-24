@@ -1447,8 +1447,9 @@ a {
     margin:0 auto;
     height:0px;
     position:relative;
+
     .toolbar-outer{
-        position:fixed;
+        position:absolute;
         right: 50%;
         bottom: 20px;
         height: auto;
@@ -1507,7 +1508,7 @@ a {
                 margin-top: 13px;
             }
         }
-        .top{
+        .tophide{
             display:none;
         }
         .top:hover,.feedback:hover{
@@ -1543,6 +1544,9 @@ a {
 
             }
         }
+    }
+    .toolbarfix{
+        position:fixed;
     }
 }
 
@@ -1921,7 +1925,7 @@ a {
                         overflow: hidden;
                     }
                     .vcode-input{
-                        width:174px;
+                        width:172px;
                         float:right;
                     }
 
