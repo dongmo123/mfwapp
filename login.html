@@ -7,6 +7,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/form.css">
     <style type="text/css" media="screen">
         html{
             overflow:hidden;
@@ -24,32 +25,32 @@
                         <form action="" method="post" name="reg-all-info" id="signup_form">
                         <div class="form2-outer">
                             <div class="form-field mt10">
-                                <input type="text" name="name" placeholder="您的名号">
-                                <div class="err-tip">重名</div>
+                                <input type="text" name="name" placeholder="您的名号" nullmsg="名号不能为空">
+                                <div class="err-tip"></div>
                             </div>
                             <div class="form-field">
-                                <input type="password" name="password" placeholder="您的密码">
-                                <div class="err-tip">至少6位密码</div>
+                                <input type="password" name="password" placeholder="您的密码" nullmsg="密码不能为空" datatype="*6-50" errormsg="密码不能小于6个字符">
+                                <div class="err-tip"></div>
                             </div>
                             <div class="form-field">
-                                <input type="repassword" name="repassword" placeholder="确认密码">
-                                <div class="err-tip">密码不符</div>
+                                <input type="repassword" name="repassword" placeholder="确认密码" errormsg="输入的密码不一致" datatype="*" recheck="password" nullmsg="请再次输入密码">
+                                <div class="err-tip"></div>
                             </div>
                             <div class="form-field">
                                 <div class="clearfix">
                                     <a href="" title="" class="vcode-send">
                                         <img src="assets/images/uploads/API/superCode.jpg" alt="图片加载失败">
                                     </a>
-                                    <input type="text" name="code" class="vcode-input" placeholder="验证码">
+                                    <input type="text" name="code" class="vcode-input" placeholder="验证码" nullmsg="验证码不能为空" errormsg="验证码错误">
                                 </div>
-                                <div class="err-tip">验证码错误</div>
+                                <div class="err-tip"></div>
                             </div>
                             <div class="form-field">
                                 <div class="clearfix">
                                     <a href="" title="" class="vcode-send">免费获取验证码</a>
-                                    <input type="text" name="smscode" class="vcode-input" placeholder="短信验证码">
+                                    <input type="text" name="smscode" class="vcode-input" placeholder="短信验证码" nullmsg="短信验证码不能为空" errormsg="短信验证码错误">
                                 </div>
-                                <div class="err-tip">手机验证码错误</div>
+                                <div class="err-tip"></div>
                             </div>
                             <div class="submit-btn">
                                 <button type="submit">完成注册</button>
@@ -64,8 +65,28 @@
         <div class="fullscreen-bg">
         </div>
     </div>
-
     <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="assets/plugins/Validform_v5.3.2_min.js"></script>
+    <script>
+        $(function(){
+            $("#signup_form").Validform({
+                tiptype:2,
+                ignoreHidden:true,
+                tiptype:function(msg,o,cssctl){
+                    var objtip=$("#signup_form .err-tip");
+                    cssctl(objtip,o.type);
+                    objtip.text(msg);
+                },
+                usePlugin:{
+                    passwordstrength:{
+                        minLen:6,
+                        maxLen:50
+                    }
+                }
+
+            });
+        });
+    </script>
 </body>
 
 </html>

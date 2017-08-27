@@ -953,13 +953,12 @@
             text-align: center;
             margin-left:5px;
         }
-        .nav-anchor{
-            display:inline-block;
-            margin-top: -60px;
-            padding-top: 60px;
-            visibility: hidden;
-
-        }
+    }
+    .nav-anchor{
+        display:block;
+        margin-top: -60px;
+        padding-top: 60px;
+        visibility: hidden;
     }
     .tab{
         margin:25px 0 10px;
@@ -1211,6 +1210,15 @@
         z-index: 100;
         display: block;
     }
+    .absolute{
+        position:absolute;
+        left:50%;
+        bottom:0;
+        top:auto;
+        margin-left:200px;
+        display:block;
+        z-index:11;
+    }
     .ui-numProp {
         padding: 20px 0 15px 13px;
         text-align: center;
@@ -1398,4 +1406,127 @@
             overflow: hidden;
         }
     }
+}
+.m-recommend{
+    margin-bottom:40px;
+    .hd{
+        margin-bottom:15px;
+        font-size:18px;
+        color:#333;
+    }
+    .db{
+        margin-left:-20px;
+        li{
+            float: left;
+            display: inline;
+            margin-left: 20px;
+            width: 235px;
+            height: 273px;
+            margin-bottom: 15px;
+        }
+        a{
+            display:inline-block;
+            &:hover{
+                h4{
+                    color:#ff9d00;
+                }
+            }
+        }
+        .image{
+            height:168px;
+            position:relative;
+            overflow:hidden;
+            img{
+                width:100%;
+            }
+        }
+        .mark-type{
+            background-color: #9b6ed2;
+            color: #9b6ed2;
+            float: left;
+            padding: 1px;
+            line-height: 18px;
+            font-size: 12px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            strong{
+                float: left;
+                padding: 0 10px;
+                color: #fff;
+                font-weight: normal;
+            }
+            span{
+                float:left;
+                padding:0 8px;
+                background-color:#fff;
+                margin-top:1px;
+            }
+        }
+        .app-minus{
+            position:absolute;
+            left:0;
+            top:50%;
+            right: 0;
+            text-align: center;
+            margin-top: -35px;
+            font-size: 20px;
+            color: #fff;
+            text-shadow: 1px 1px 10px rgba(0,0,0,.5);
+            line-height: 36px;
+            font-weight: normal;
+            .minline{
+                display: inline-block;
+                border-bottom: 1px solid #fff;
+                margin-bottom: 5px;
+                i{
+                    float: left;
+                    margin-left: -4px;
+                    display: inline-block;
+                    width: 32px;
+                    height: 39px;
+                    background: url('../images/icon/appminus32x39.png') no-repeat 0 0;
+                    overflow: hidden;
+                }
+            }
+        }
+        .info{
+            height: 104px;
+            border: 1px solid #dce0e0;
+            border-top: 0 none;
+            h4{
+                line-height: 18px;
+                height: 36px;
+                margin: 0 10px 12px;
+                color: #333;
+                overflow: hidden;
+                padding-top: 12px;
+                font-size: 14px;
+                font-weight:bold;
+            }
+            .price{
+                height: 23px;
+                border-top: 1px solid #edefef;
+                padding: 10px;
+                line-height: 24px;
+                overflow: hidden;
+                >strong{
+                    float: right;
+                    font-size: 22px;
+                    color: #ff6f00;
+                    font-weight: normal;
+                    span{
+                        color: #999;
+                        font-size:14px;
+                    }
+                }
+                >span{
+                    color: #999;
+                    float:left
+                }
+            }
+        }
+
+    }
+
 }

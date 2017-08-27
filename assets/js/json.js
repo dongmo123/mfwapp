@@ -175,13 +175,87 @@ $(function() {
 
     $('.page_loader').click(function() {
         $(this).html('加载中. . .');
-        $(this).mouseout(function(event) {
-            $(this).css('background-color', '#efefef')
-        });;
+        $(this).addClass('loading');
         var gong = '';
-
+        for (var i = 0; i < 3; i++) {
+            gong += '<div class="feed-item" data-type="2">';
+            gong += '    <a href="" title="">';
+            gong += '        <div class="bar clearfix">';
+            gong += '            <span class="stat">';
+            gong += '                <span class="num">161</span> 蜂蜂体验过';
+            gong += '                <i class="icon-cart"></i>';
+            gong += '            </span>';
+            gong += '            <span class="type">';
+            gong += '                <i class="icon-sales"></i>来自';
+            gong += '                <strong>自由行攻略</strong>';
+            gong += '            </span>';
+            gong += '        </div>';
+            gong += '        <div class="title">';
+            gong += '            看长白山天池的最佳季节，你还等什么！（附景点和路线推荐）';
+            gong += '        </div>';
+            gong += '        <div class="txt">';
+            gong += '        在我们东北人心里，长白山一直都是一座神秘莫测的大神山。她是满族先民的发祥地，是爱新觉罗皇室的龙兴之地。 这里林木葱郁，浅浅的溪水环抱于森林周身，就连空气中也带着湿润的水汽，漂浮在空气中，更增一种朦胧又神秘的美感;这里还有让人流连忘返的纯正朝鲜文化与地道满足传统，厚重又有神的文化底蕴让你不仅仅是来此...';
+            gong += '        </div>';
+            gong += '        <div class="imgs clearfix">';
+            gong += '            <img src="assets/images/uploads/gonglve-imgs/ziyou-1.jpeg">';
+            gong += '            <img src="assets/images/uploads/gonglve-imgs/ziyou-2.jpeg">';
+            gong += '            <img src="assets/images/uploads/gonglve-imgs/ziyou-3.jpeg">';
+            gong += '            <span class="ext-r">144367浏览</span>';
+            gong += '        </div>';
+            gong += '    </a>';
+            gong += '</div>';
+            gong += '<div class="hr"></div>';
+        }
         $('.gl-post>div').append(gong);
+        $(this).html('<span>加载更多</span><i></i>');
+        $(this).removeClass('loading');
     });
 
+
+    /*sales.html  换一个*/
+    $('#layout #saleschange').click(function() {
+        var imglist = [
+            "tiantian1.png",
+            "tiantian2.jpeg",
+            "tiantian3.jpeg",
+            "tiantian4.gif"
+        ];
+        var list = [{
+            "img": imglist[random(0, 3)],
+            "title": "上海直飞厦门3-5日自由行（市中心3-5星酒店+鼓浪屿酒店+机票酒店随心配+精美自助早餐+托运15kg）",
+            "price": random(100, 10000)
+        }, {
+            "img": imglist[random(0, 3)],
+            "title": "南京直飞大阪5天往返含税机票（吉祥航空+预售至2017年底+赠WiFi+可选签证/保险+领券减50/第二人减200",
+            "price": random(100, 10000)
+        }, {
+            "img": imglist[random(0, 3)],
+            "title": "西安直飞巴厘岛7-8天自由行（住希尔顿洲际阿雅娜叶子宝格丽+赠接送机电话卡+SPA或乌布游+蜜月亲子定制）",
+            "price": random(100, 10000)
+        }, {
+            "img": imglist[random(0, 3)],
+            "title": "成都直飞马尔代夫港丽岛6-7天自由行（第一家180°海底餐厅/最“靓”的岛/VIP休息室免费餐/儿童吃住/看护中心免费+双岛享受+免费多尼船往返）",
+            "price": random(100, 10000)
+        }];
+        var sales = '';
+        for (var i = 0; i < 4; i++) {
+            sales += `
+                <li class="item">
+                    <a href="show.html">
+                        <div class="image">
+                            <img src="assets/images/uploads/sales/${list[i].img}">
+                        </div>
+                        <div class="caption">
+                            <h3>${list[i].title}</h3>
+                            <span class="price">
+                                <b>￥${list[i].price}</b>起
+                            </span>
+                        </div>
+                    </a>
+                </li>
+            `;
+        }
+        $(this).parent('.mod-hd').siblings('.mod-bd').children('.sales-cards').html(sales);
+    });
 
 });

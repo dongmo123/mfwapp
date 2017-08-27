@@ -1,0 +1,515 @@
+.mfw-header .login-info {
+  float: right;
+  margin-left: 20px;
+  position: relative;
+}
+
+.mfw-header .login-info .head-user {
+  float: right;
+}
+
+.mfw-header .login-info .head-user:hover .dropdown-menu {
+  display: block;
+}
+
+.mfw-header .login-info a {
+  color: #666;
+  font-size: 14px;
+}
+
+.mfw-header .login-info .dropdown-menu {
+  position: absolute;
+  top: 68px;
+  right: 0;
+  width: 208px;
+  display: none;
+  border: 1px solid #d6d6d6;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.mfw-header .login-info .dropdown-menu ul {
+  margin-bottom: 10px;
+}
+
+.mfw-header .login-info .dropdown-menu li {
+  height: 36px;
+  font-size: 14px;
+  line-height: 36px;
+  color: #666;
+  position: relative;
+  vertical-align: top;
+}
+
+.mfw-header .login-info .dropdown-menu li a {
+  display: block;
+  height: 36px;
+  padding: 0 10px 0 20px;
+  color: #666;
+  cursor: pointer;
+}
+
+.mfw-header .login-info .dropdown-menu li a:hover {
+  background-color: #eee;
+  color: #666;
+  text-decoration: none;
+}
+
+.mfw-header .login-info .dropdown-user li a {
+  padding-left: 53px;
+}
+
+.mfw-header .login-info .dropdown-user [class|="icon"] {
+  position: absolute;
+  left: 23px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  background: url("../images/icon/header-sprites13.png") no-repeat -60px -50px;
+}
+
+.mfw-header .login-info .dropdown-user .icon-wo {
+  height: 17px;
+  background-position: -90px -50px !important;
+}
+
+.mfw-header .login-info .dropdown-user .icon-writenotes {
+  background-position: -120px -50px !important;
+}
+
+.mfw-header .login-info .dropdown-user .icon-3 {
+  background-position: -150px -110px !important;
+}
+
+.mfw-header .login-info .dropdown-user .icon-4 {
+  background-position: -150px -50px !important;
+}
+
+.mfw-header .login-info .dropdown-user .icon-5 {
+  background-position: -180px -50px !important;
+}
+
+.mfw-header .login-info .dropdown-user .icon-6 {
+  background-position: -90px -80px !important;
+}
+
+.mfw-header .login-info .dropdown-user .icon-7 {
+  background-position: -120px -80px !important;
+}
+
+.mfw-header .login-info .dropdown-user .icon-8 {
+  background-position: -180px -110px !important;
+}
+
+.mfw-header .login-info .dropdown-user .icon-9 {
+  background-position: -150px -80px !important;
+}
+
+.mfw-header .login-info .dropdown-user .icon-10 {
+  background-position: -180px -80px !important;
+}
+
+.mfw-header .login-info .dropdown-user .icon-11 {
+  width: 18px;
+  height: 18px;
+  background-position: -90px -110px !important;
+}
+
+.mfw-header .login-info .dropdown-user .icon-12 {
+  background-position: -120px -110px !important;
+}
+
+.mfw-header .login-info .dropdown-user .level {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #ef523d;
+  font-weight: bold;
+}
+
+.mfw-header .login-info .dropdown-msg {
+  right: 0;
+}
+
+.mfw-header .login-info .user-info {
+  background-color: #ff9d00;
+  padding: 0 0 0 20px;
+  height: 50px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 50px;
+  margin: -1px -1px 10px;
+}
+
+.mfw-header .login-info .user-info a {
+  color: #fff;
+}
+
+.mfw-header .login-info .user-info a:hover {
+  text-decoration: underline;
+}
+
+.mfw-header .login-info .drop-trigger {
+  display: inline-block;
+  height: 68px;
+  padding-right: 13px;
+  position: relative;
+  cursor: pointer;
+}
+
+.mfw-header .login-info .drop-trigger:hover .icon-caret-down {
+  border-top-color: #ff9d00;
+}
+
+.mfw-header .login-info .drop-trigger:hover .user-image {
+  border-color: #ff9d00;
+}
+
+.mfw-header .login-info .user-image {
+  float: left;
+  margin-top: 15px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+}
+
+.mfw-header .login-info .icon-caret-down {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-top: 4px solid #666;
+  border-left: 4px dashed transparent;
+  border-right: 4px dashed transparent;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 34px;
+}
+
+.mfw-header .login-info .head-msg {
+  float: right;
+  display: inline;
+  margin-right: 15px;
+  line-height: 68px;
+}
+
+.mfw-header .login-info .head-msg > a:hover {
+  color: #ff9d00;
+}
+
+.mfw-header .login-info .head-msg:hover .dropdown-menu {
+  display: block;
+}
+
+.mfw-header .login-info .head-daka {
+  float: right;
+  margin-right: 15px;
+  padding-top: 23px;
+  width: 55px;
+  position: relative;
+}
+
+.mfw-header .login-info .head-daka a {
+  display: block;
+  height: 20px;
+  background-color: #1493e3;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.myinfo-outer {
+  padding: 25px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.myinfo-outer .aside {
+  width: 220px;
+  float: left;
+}
+
+.myinfo-outer .aside a {
+  display: block;
+  line-height: 46px;
+  font-size: 14px;
+  color: #666;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.myinfo-outer .aside a i {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background: url("../images/icon/i_left4.png") no-repeat;
+  margin: 0 10px 0 24px;
+  vertical-align: middle;
+}
+
+.myinfo-outer .aside a:hover {
+  background-color: #f0f0f0;
+}
+
+.myinfo-outer .aside .on {
+  color: #fff;
+  background-color: #ff9d00;
+}
+
+.myinfo-outer .aside .i1 {
+  background-position: -22px 0;
+}
+
+.myinfo-outer .aside .i2 {
+  background-position: 0 -22px;
+}
+
+.myinfo-outer .aside .i3 {
+  background-position: 0 -44px;
+}
+
+.myinfo-outer .aside .i4 {
+  background-position: 0 -66px;
+}
+
+.myinfo-outer .aside .i5 {
+  background-position: 0 -154px;
+}
+
+.myinfo-outer .aside .i6 {
+  background-position: 0 -176px;
+}
+
+.myinfo-outer .aside .i7 {
+  background-position: 0 -198px;
+}
+
+.myinfo-outer .content {
+  padding-left: 40px;
+  width: 740px;
+  min-height: 480px;
+  float: right;
+  background: #fff;
+}
+
+.myinfo-outer .content .hd {
+  padding-bottom: 18px;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.myinfo-outer .content .hd strong {
+  font-size: 24px;
+  color: #444;
+  font-weight: normal;
+}
+
+.myinfo-outer .content .hd span {
+  margin-left: 18px;
+  font-size: 14px;
+  color: #999;
+}
+
+.myinfo-outer .content .hd .progress {
+  width: 110px;
+  height: 16px;
+  display: inline-block;
+  background-color: #bddf7d;
+  margin-left: 8px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.myinfo-outer .content .hd .progress .num {
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  right: 3px;
+  line-height: 16px;
+}
+
+.myinfo-outer .content .hd .progress .on {
+  background-color: #add75c;
+  height: 16px;
+}
+
+.myinfo-outer .content dl {
+  clear: both;
+  padding-bottom: 15px;
+}
+
+.myinfo-outer .content dt {
+  width: 85px;
+  float: left;
+  padding: 6px 10px 0 0;
+  text-align: right;
+  color: #a1a1a1;
+  font-size: 16px;
+}
+
+.myinfo-outer .content dd {
+  width: 490px;
+  float: left;
+}
+
+.myinfo-outer .content dd label {
+  padding-right: 20px;
+  line-height: 32px;
+  float: left;
+  cursor: pointer;
+}
+
+.myinfo-outer .content dd label .cssradio {
+  float: left;
+  margin: 6px 6px 0 0;
+}
+
+.myinfo-outer .content .cssradio {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.myinfo-outer .content .cssradio input {
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  top: 1px;
+  left: 1px;
+}
+
+.myinfo-outer .content .cssradio input:checked + span:after {
+  opacity: 1;
+  transform: scale(1);
+  background-color: #ffa800;
+}
+
+.myinfo-outer .content .cssradio span {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: #fff;
+  border: 1px solid #ffa800;
+}
+
+.myinfo-outer .content .cssradio span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: 0;
+  transition: all .15s ease-out;
+  transform: scale(0.5);
+}
+
+.myinfo-outer .content input {
+  width: 208px;
+  border: 1px solid #d3d3d3;
+  height: 18px;
+  padding: 6px 8px;
+  line-height: 18px;
+  font-size: 14px;
+  color: #999;
+  outline: none;
+  transition: box-shadow 0.25s linear 0s;
+  border-radius: 3px;
+}
+
+.myinfo-outer .content input:focus {
+  border: 1px solid #ffa800;
+  transition: box-shadow 0.25s linear 0s;
+  box-shadow: 0 0 5px #ffa200;
+}
+
+.myinfo-outer .content textarea {
+  width: 472px;
+  height: 110px;
+  border: 1px solid #d3d3d3;
+  padding: 6px 8px;
+  line-height: 1.6em;
+  font-size: 14px;
+  color: #999;
+  outline: none;
+  transition: box-shadow 0.25s linear 0s;
+  border-radius: 3px;
+  resize: none;
+}
+
+.myinfo-outer .content textarea:focus {
+  border: 1px solid #ffa800;
+  transition: box-shadow 0.25s linear 0s;
+  box-shadow: 0 0 5px #ffa200;
+}
+
+.myinfo-outer .content .myaddress a {
+  color: #ff9d00;
+  font-size: 14px;
+}
+
+.myinfo-outer .content .myaddress a:hover {
+  text-decoration: underline;
+}
+
+.myinfo-outer .content .tips {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.8em;
+  background-color: #f6f6f6;
+  width: 345px;
+  padding: 15px 20px;
+}
+
+.myinfo-outer .content .tips .title {
+  font-size: 14px;
+  color: #999;
+  padding-bottom: 5px;
+}
+
+.myinfo-outer .content .tips .title b {
+  color: #ffa800;
+  font-weight: normal;
+  font-size: 12px;
+  vertical-align: text-top;
+}
+
+.myinfo-outer .content .btn-sub {
+  padding: 10px 0;
+  width: 490px;
+  float: right;
+}
+
+.myinfo-outer .content .btn-sub button {
+  width: 112px;
+  height: 36px;
+  display: block;
+  line-height: 36px;
+  background-color: #ffa800;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.myinfo-outer .content .btn-sub button:hover {
+  background-color: #ff8a00;
+}

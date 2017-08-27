@@ -348,7 +348,6 @@ $(function() {
         }
         //鼠标移入div之后，停止计时器
         $('#slide_box li').hover(function() {
-            console.log('shubiaoyiru');
             clearInterval(timer);
         }, function() {
             autoPlay();
@@ -581,7 +580,6 @@ $(function() {
             $root.animate({
                 scrollTop: $($(this).attr('href')).offset().top
             }, 500);
-            console.log();
             return false;
         }
     });
@@ -622,4 +620,6 @@ $(function() {
         $(this).addClass('on').siblings().removeClass('on');
         $(this).parent().parent().siblings('.trigger').children('span').text($(this).find('span').text()).parent().parent().removeClass('drop-open');
     });
+
+
 });

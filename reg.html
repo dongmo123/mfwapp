@@ -7,6 +7,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/form.css">
     <style type="text/css" media="screen">
         html{
             overflow:hidden;
@@ -23,8 +24,8 @@
                         <form action="./login.html" method="get" id="login_form">
                             <input type="hidden" name="token" value="">
                             <div class="form-field">
-                                <input name="mobile" type="text" placeholder="您的手机号码" autocomplete="off" data-type="mobile" data-verification-name="手机号码" class="" value="17600306666">
-                                <div class="err-tip">手机号码格式不正确</div>
+                                <input name="mobile" type="text" placeholder="您的手机号码" datatype="m" errormsg="手机号码格式不正确" nullmsg="手机号码不能为空" value="13619560535">
+                                <div class="err-tip"></div>
                             </div>
                             <div class="submit-btn">
                                 <button type="submit" class="checkphone">立即注册</button>
@@ -33,19 +34,19 @@
                                 注册视为同意<a target="_blank" href="">《蚂蜂窝用户使用协议》</a>
                             </div>
                         </form>
-                        <form action="index.html" method="post" name="reg-form" id="reg_form" style="display: none;">
+                        <form action="mobile.php" method="get" name="reg-form" id="reg_form" style="display: none;">
                             <input type="hidden" name="token" value="">
                             <div class="form-field">
-                                <input name="passport" type="text" placeholder="您的邮箱/手机号" autocomplete="off" data-type="passport" data-verification-name="您的邮箱/手机号" class="" value="">
-                                <div class="err-tip">手机号码格式不正确</div>
+                                <input name="passport" type="text" placeholder="您的邮箱/手机号" datatype="*:" class="" value="" nullmsg="账号不能为空">
+                                <div class="err-tip"></div>
                             </div>
                             <div class="form-field">
-                                <input name="password" type="text" placeholder="您的密码" autocomplete="off" data-type="password" data-verification-name="密码" class="" value="">
-                                <div class="err-tip">手机号码格式不正确</div>
+                                <input name="password" type="text" placeholder="您的密码" datatype="*4-50" class="" value="" nullmsg="密码不能为空" errormsg="密码不能小于4个字符">
+                                <div class="err-tip"></div>
                             </div>
                             <div class="form-link"><a href="/forget">忘记密码</a></div>
                             <div class="submit-btn">
-                                <button type="button" class="login-submit">登 录</button>
+                                <button type="submit" class="login-submit">登 录</button>
                             </div>
                         </form>
                         <div class="connect">
@@ -72,8 +73,28 @@
         </div>
     </div>
     <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="assets/plugins/Validform_v5.3.2_min.js"></script>
     <script>
         $(function(){
+
+            $("#login_form").Validform({
+                tiptype:2,
+                ignoreHidden:true,
+                tiptype:function(msg,o,cssctl){
+                    var objtip=$("#login_form .err-tip");
+                    cssctl(objtip,o.type);
+                    objtip.text(msg);
+                }
+            });
+            $("#reg_form").Validform({
+                tiptype:2,
+                ignoreHidden:true,
+                tiptype:function(msg,o,cssctl){
+                    var objtip=$("#reg_form .err-tip");
+                    cssctl(objtip,o.type);
+                    objtip.text(msg);
+                }
+            });
             $('#reg_link a').click(function(){
                 $('#login_link').removeClass('hide');
                 $('#reg_link').addClass('hide');

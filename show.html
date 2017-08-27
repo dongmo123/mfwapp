@@ -328,7 +328,6 @@
             </div>
             <div class="detail-wrapper clearfix">
                 <!-- 绑定结算导航start-->
-
                 <div class="side-bar">
                     <div class="m-book">
                         <div class="stock_0">
@@ -729,6 +728,33 @@
                      </div>
                 </div>
             </div>
+            <div class="m-recommend">
+                <div class="hd">看了又看</div>
+                <ul class="db clearfix">
+                <script>
+                    var look=[
+                        {"place":"鼓浪屿","salestype":"机+酒","app":true,"jian":"50","content":"上海直飞厦门3-4日自由行( 市中心3-5星酒店+鼓浪屿酒店随心搭+赠旅游...","yishou":218,"price":699,"img":"look1.jpeg"},
+                        {"place":"厦门","salestype":"机+酒","app":false,"jian":"","content":"上海直飞厦门3-4天自由行（可选市区五星酒店+鼓浪屿酒店+航班随心搭）","yishou":88,"price":710,"img":"look2.jpeg"},
+                        {"place":"厦门","salestype":"机+酒","app":false,"jian":"","content":"上海直飞厦门3-4天自由行（精选3-5星市区酒店+可选鼓浪屿酒店+赠早餐+...","yishou":17,"price":688,"img":"look3.jpeg"},
+                        {"place":"厦门","salestype":"机+酒","app":true,"jian":"100","content":"上海直飞厦门3-4日自由行( 市中心酒店+鼓浪屿酒店随心搭+精美早餐+托...","yishou":0,"price":690,"img":"look4.jpeg"},
+                        {"place":"厦门","salestype":"机+酒","app":true,"jian":"100","content":"上海直飞厦门3-4日自由行( 市中心酒店+鼓浪屿酒店随心搭+精美早餐+托...","yishou":0,"price":690,"img":"look5.jpeg"},
+                        {"place":"厦门","salestype":"机+酒","app":true,"jian":"100","content":"上海直飞厦门3-4日自由行( 市中心酒店+鼓浪屿酒店随心搭+精美早餐+托...","yishou":0,"price":690,"img":"look6.png"},
+                        {"place":"厦门","salestype":"机+酒","app":true,"jian":"100","content":"上海直飞厦门3-4日自由行( 市中心酒店+鼓浪屿酒店随心搭+精美早餐+托...","yishou":0,"price":690,"img":"look7.jpeg"},
+                        {"place":"厦门","salestype":"机+酒","app":true,"jian":"100","content":"上海直飞厦门3-4日自由行( 市中心酒店+鼓浪屿酒店随心搭+精美早餐+托...","yishou":0,"price":690,"img":"look8.jpeg"}
+                    ];
+                    var liststr='';
+                    look.forEach(function(v,k){
+                        liststr+='<li class="item"><a href=""><div class="image"><img src="assets/images/uploads/sales-intro/'+v.img+'"><span class="mark-type"><strong>'+v.place+'</strong><span>机+酒</span></span>';
+                        if(v.app==true){
+                            liststr+='<div class="app-minus"><span class="minline"><i></i>APP下单</span><div>立减<b>'+v.jian+'</b>元</div></div>';
+                        }
+
+                        liststr+=' </div><div class="info"><h4>'+v.content+'</h4><div class="price"><strong>￥'+v.price+'<span>起/人</span></strong><span>已售'+v.yishou+'件</span></div></div></a></li>'
+                    });
+                    document.write(liststr);
+                </script>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -842,18 +868,21 @@
                     costt = $('#target_cost').offset().top,
                     purt = $('#target_purchase').offset().top,
                     revt = $('#target_review').offset().top,
-                    salest = $('.sales-nav-wrap').offset().top;
+                    salest = $('.sales-nav-wrap').offset().top,
+                    detailH=$('.detail-wrapper').height(),
+                    detailt=$('.detail-wrapper').offset().top,
+                    sidebarH=$('.side-bar').height();
 
-                if (st > introt && st < costt) {
+                if (st > introt-30 && st < costt-30) {
                     $('.sales-nav-wrap li').eq(0).addClass('on').siblings().removeClass('on');
                 }
-                if (st > costt && st < purt) {
+                if (st > costt-30 && st < purt-30) {
                     $('.sales-nav-wrap li').eq(1).addClass('on').siblings().removeClass('on');
                 }
-                if (st > purt && st < revt) {
+                if (st > purt -30&& st < revt-30) {
                     $('.sales-nav-wrap li').eq(2).addClass('on').siblings().removeClass('on');
                 }
-                if (st > revt) {
+                if (st > revt-30) {
                     $('.sales-nav-wrap li').eq(3).addClass('on').siblings().removeClass('on');
                 }
                 // console.log(st - $('.sales-nav-wrap').offset().top);
@@ -867,6 +896,13 @@
 
                 if (st > introt) {
                     $('.detail-wrapper .side-bar').addClass('barfixed');
+                }
+                // 如果到达底部，右边绑定栏要固定到底部
+                if(st>(detailt+detailH-sidebarH)){
+                    $('.detail-wrapper .side-bar').addClass('absolute');
+                }
+                if(st<(detailt+detailH-sidebarH)){
+                    $('.detail-wrapper .side-bar').removeClass('absolute');
                 }
             }
             $(window).scroll(function() {

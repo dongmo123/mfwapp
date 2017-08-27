@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>蚂蜂窝</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+</head>
+
+<body>
+    <header class="header">
+        <div  class="mfw-header">
+            <div class="header-wrap">
+                <div class="head-logo"><a class="mfw-logo" title="蚂蜂窝自由行" href="/"></a></div>
+                <ul class="head-nav">
+                    <li><a href="./index.html" title="">首页</a></li>
+                    <li><a href="./list.html" title="">目的地</a></li>
+                    <li><a href="./gonglve.html" title="">旅游攻略</a></li>
+                    <li class="head-nav-dropdown">
+                        <a href="sales.html" class="drop-toggle" title="">自由行商城<i class="icon-caret-down"></i></a>
+                        <div class="dropdown-menu dropdown-sales">
+                            <ul>
+                                <li><a target="_blank" href="" title="机票＋酒店">机票＋酒店<i class="i-hot">hot</i></a></li>
+                                <li><a target="_blank" href="">跟团游</a></li>
+                                <li><a target="_blank" href="" title="当地游">当地游</a></li>
+                                <li><a target="_blank" href="" title="国内机票">国内机票<i class="i-new">new</i></a></li>
+                                <li><a target="_blank" href="visa/" title="签证">签证</a></li>
+                                <li><a target="_blank" href="" title="国际租车">国际租车</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="" title="">酒店</a></li>
+                    <li class="head-nav-dropdown">
+                        <a href="" title="" class="drop-toggle">社区<i class="icon-caret-down"></i></a>
+                        <div class="dropdown-menu dropdown-community">
+                            <ul class="nav-list">
+                                <li><a target="_blank" href="" title="问答">问答<i class="i-hot">hot</i></a></li>
+                                <li><a target="_blank" href="" title="马蜂窝周边">马蜂窝周边<i class="i-new">new</i></a></li>
+                                <li><a target="_blank" href="visa/" title="蜂蜜兑换">蜂蜜兑换</a></li>
+                                <li><a target="_blank" href="" title="结伴">结伴</a></li>
+                            </ul>
+                            <ul class="nav-list-sub clearfix">
+                                <li><a href="/group/" target="_blank" title="蚂蜂窝旅行家" data-cs-p="group">小组论坛</a></li>
+                                <li><a href="/rudder/" target="_blank" title="分舵同城" data-cs-p="rudder">分舵同城</a></li>
+                                <li><a href="/auction/" target="_blank" title="蚂蜂窝拍卖行" data-cs-p="paimai">蚂蜂窝拍卖行</a></li>
+                                <li><a href="/club/" target="_blank" title="蜂首聚乐部" data-cs-p="club">蜂首聚乐部</a></li>
+                                <li><a href="/photo_pk/pk.php" target="_blank" title="照片PK" data-cs-p="photo_pk">照片PK</a></li>
+                                <li><a href="/focus/" target="_blank" title="真人兽" data-cs-p="focus">真人兽</a></li>
+                                <li><a href="/mall" target="_blank" title="道具商店" data-cs-p="virtual">道具商店</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="header-search">
+                    <div class="head-search-wrapper">
+                        <div class="head-searchform">
+                            <input type="text" name="q" id="head_search_input" autocomplete="off">
+                            <a href="javascript:void(0)" title="" class="icon-search"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-info">
+                    <div class="head-user">
+                        <a href="" class="drop-trigger">
+                            <div class="user-image">
+                                <img src="assets/images/icon/defaulticon.jpeg">
+                            </div>
+                            <i class="icon-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-user">
+                            <div class="user-info">
+                                <a href="">蜂蜜 0</a>/<a href="">金币 0</a>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-wo"></i>我的蚂蜂窝
+                                        <span class="level">LV.2</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-writenotes"></i>写游记
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-4"></i>我的足迹
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-5"></i>我的问答
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-6"></i>我的好友
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-7"></i>我的收藏
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-8"></i>我的路线
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-9"></i>我的订单
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-10"></i>我的优惠劵
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-11"></i>设置
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-12"></i>退出
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="head-msg">
+                        <a href="" class="drop-trigger">
+                            <i class="icon-msg"></i>
+                            消息
+                            <i class="icon-caret-down"></i>
+                            <span class="head-msg-new hide">1</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-msg">
+                            <ul>
+                                <li>
+                                    <a href="">系统通知</a>
+                                </li>
+                                <li>
+                                    <a href="">私信</a>
+                                </li>
+                                <li>
+                                    <a href="">文章消息</a>
+                                </li>
+                                <li>
+                                    <a href="">小组消息</a>
+                                </li>
+                                <li>
+                                    <a href="">问答消息</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="head-daka">
+                        <a href="" class="btn head-btn-daka">打卡</a>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow"></div>
+        </div>
+    </header>
+    <div class="wrapper clearfix">
+        <div class="myinfo-outer">
+            <div class="aside">
+                <a href="" class="on"><i class="i1"></i>我的信息</a>
+                <a href=""><i class="i2"></i>我的头像</a>
+                <a href=""><i class="i3"></i>绑定设置</a>
+                <a href=""><i class="i4"></i>账号安全</a>
+                <a href=""><i class="i5"></i>我的窝设置</a>
+                <a href=""><i class="i6"></i>黑名单管理</a>
+                <a href=""><i class="i7"></i>我的钱包</a>
+            </div>
+            <div class="content">
+                <div class="hd">
+                    <strong>我的信息</strong>
+                    <span>资料完善度
+                        <div class="progress">
+                            <div class="num">60%</div>
+                            <div class="on" style="width:60%"></div>
+                        </div>
+                    </span>
+                </div>
+                <div class="userinfo">
+                    <form action="" method="post" accept-charset="utf-8">
+                        <dl class="clearfix">
+                            <dt>名号：</dt>
+                            <dd>
+                                <input type="text" name="name" value="冬末">
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>性别：</dt>
+                            <dd>
+                                <label>
+                                    <span class="cssradio">
+                                        <input type="radio" name="gender" value="1" checked="true">
+                                        <span></span>
+                                    </span>男
+                                </label>
+                                <label>
+                                    <span class="cssradio">
+                                        <input type="radio" name="gender" value="0" checked="false">
+                                        <span></span>
+                                    </span>女
+                                </label>
+                                <label>
+                                    <span class="cssradio">
+                                        <input type="radio" name="gender" value="2" checked="false">
+                                        <span></span>
+                                    </span>保密
+                                </label>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>居住城市：</dt>
+                            <dd>
+                                <input type="text" name="name" value="">
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>出生日期：</dt>
+                            <dd>
+                                <input type="text" name="name" value="">
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>个人简介：</dt>
+                            <dd>
+                                <textarea name="" placeholder="例：摄影师/旅居澳洲/潜水爱好者"></textarea>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>收货地址：</dt>
+                            <dd class="myaddress">
+                                <a href="">新增收货地址</a>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt></dt>
+                            <dd class="tips">
+                                <p class="title"><b>**</b>提示信息<b>**</b></p>
+                                <p>如果您在蚂蜂窝活动中获得奖品，我们将按照该收货地址发送奖品，
+                                    所以请填写 真实有效 的收货信息。</p>
+                            </dd>
+                        </dl>
+                        <div class="btn-sub"><button type="submit">保存</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="ft-content">
+            <div class="ft-info">
+                <dl class="ft-info-col ft-info-intro">
+                    <dt>中国领先的自由行服务平台</dt>
+                    <dd>覆盖全球200多个国家和地区</dd>
+                    <dd><strong>100,000,000</strong> 位旅行者</dd>
+                    <dd><strong>920,000</strong> 家国际酒店</dd>
+                    <dd><strong>21,000,000</strong> 条真实点评</dd>
+                    <dd><strong>382,000,000</strong> 次攻略下载</dd>
+                    <dd><a class="highlight" href="" target="_blank">中国旅游行业第一部“玩法”</a></dd>
+                </dl>
+                <dl class="ft-info-col ft-info-about">
+                    <dt>关于我们</dt>
+                    <dd><a href="/s/about.html">关于蚂蜂窝</a></dd>
+                    <dd><a href="/s/property.html">网络信息侵权通知指引</a></dd>
+                    <dd><a href="/s/private.html">隐私政策</a></dd>
+                    <dd><a href="/s/agreement.html">服务协议</a></dd>
+                    <dd><a href="/s/contact.html">联系我们</a></dd>
+                    <dd><a class="highlight" title="蚂蜂窝团队招聘" target="_blank" href="">加入蚂蜂窝</a></dd>
+                </dl>
+                <dl class="ft-info-col ft-info-service">
+                    <dt>旅行服务</dt>
+                    <dd>
+                        <ul class="clearfix">
+                            <li><a target="_blank" href="/gonglve/">旅游攻略</a></li>
+                            <li><a target="_blank" href="/hotel/">酒店预订</a></li>
+                            <li><a target="_blank" href="/sales/">旅游特价</a></li>
+                            <li><a target="_blank" href="http://zuche.mafengwo.cn/">国际租车</a></li>
+                            <li><a target="_blank" href="/wenda/">旅游问答</a></li>
+                            <li><a target="_blank" href="http://z.mafengwo.cn">旅游指南</a></li>
+                            <li><a target="_blank" href="http://huoche.mafengwo.cn">订火车票</a></li>
+                            <li><a target="_blank" href="/travel-news/">旅游资讯</a></li>
+                            <li><a target="_blank" href="/app/intro/gonglve.php">APP下载</a></li>
+                            <li style="clear: left;"><a target="_blank" href="/sales/alliance.php" class="highlight">全球供应商入驻</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="ft-info-col ft-info-qrcode">
+                    <dd>
+                        <span class="ft-qrcode-tejia"></span>
+                        <p>蚂蜂窝良品<br>官方服务号</p>
+                    </dd>
+                    <dd>
+                        <span class="ft-qrcode-weixin"></span>
+                        <p>蚂蜂窝自由行<br>订阅号</p>
+                    </dd>
+                </dl>
+                <dl class="ft-info-social">
+                    <dt>关注我们</dt>
+                    <dd>
+                        <a class="ft-social-weibo" target="_blank" href=""><i></i></a>
+                        <a class="ft-social-qqt" target="_blank" href=""><i></i></a>
+                        <a class="ft-social-qzone" target="_blank" href=""><i></i></a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="ft-links">
+                <a target="_blank" href="http://china.makepolo.com/">马可波罗</a>
+                <a target="_blank" href="http://www.onlylady.com/" se_prerender_url="complete">Onlylady女人志</a>
+                <a target="_blank" href="http://trip.elong.com/">艺龙旅游指南</a><a target="_blank" href="http://www.cncn.com">欣欣旅游网</a><a target="_blank" href="http://www.8264.com/">户外运动</a><a target="_blank" href="http://www.yue365.com/">365音乐网</a><a target="_blank" href="http://ishare.iask.sina.com.cn/">爱问共享资料</a><a target="_blank" href="http://www.uzai.com/">旅游网</a><a target="_blank" href="http://www.zongheng.com/">小说网</a><a target="_blank" href="http://www.xuexila.com/">学习啦</a><a target="_blank" href="http://www.yododo.com">游多多自助游</a><a target="_blank" href="http://www.zhcpic.com/">问答</a><a target="_blank" href="http://huoche.mafengwo.cn/">火车时刻表</a><a target="_blank" href="http://www.lvmama.com">驴妈妈旅游网</a><a target="_blank" href="http://www.haodou.com/">好豆美食网</a><a target="_blank" href="http://www.taoche.com/">二手车</a><a target="_blank" href="http://www.lvye.cn">绿野户外</a><a target="_blank" href="http://www.tuniu.com/">途牛旅游网</a><a target="_blank" href="http://www.mapbar.com/">图吧</a><a target="_blank" href="http://www.chnsuv.com">SUV联合越野</a><a target="_blank" href="http://www.uc.cn/">手机浏览器</a><a target="_blank" href="http://sh.city8.com/">上海地图</a><a target="_blank" href="http://www.tianqi.com/">天气预报查询</a><a target="_blank" href="http://www.ly.com/">同程旅游</a><a target="_blank" href="http://www.tieyou.com/">火车票</a><a target="_blank" href="http://you.ctrip.com/">携程旅游</a><a target="_blank" href="http://www.jinjiang.com">锦江旅游</a><a target="_blank" href="http://www.huoche.net/">火车时刻表</a><a target="_blank" href="http://www.tripadvisor.cn/" se_prerender_url="complete">TripAdvisor</a><a target="_blank" href="http://www.tianxun.com/">天巡网</a><a target="_blank" href="http://www.mayi.com/">短租房</a><a target="_blank" href="http://www.zuzuche.com">租租车</a><a target="_blank" href="http://www.5fen.com/">五分旅游网</a><a target="_blank" href="http://www.zhuna.cn/">酒店预订</a><a target="_blank" href="http://www.ailvxing.com">爱旅行网</a><a target="_blank" href="http://360.mafengwo.cn/all.php">旅游</a><a target="_blank" href="http://vacations.ctrip.com/">旅游网</a><a target="_blank" href="http://www.wed114.cn" se_prerender_url="complete">wed114结婚网</a><a target="_blank" href="http://www.chexun.com/">车讯网</a><a target="_blank" href="http://www.aoyou.com/">遨游旅游网</a><a target="_blank" href="http://www.91.com/">手机</a>
+                <a href="http://www.mafengwo.cn/s/link.html" target="_blank">更多友情链接&gt;&gt;</a>
+            </div>
+            <div class="ft-copyright">
+                <a href="" title="" class="f f1"></a>
+                <a href="" title="" class="f f2"></a>
+                <a href="" title="" class="f f3"></a>
+                <a href="" class="ft-mfw-logo"><i></i></a>
+                <p>© 2017 Mafengwo.cn
+                    <a href="" target="_blank" >京ICP备11015476号</a> 京公网安备110105013401号
+                    <a href="" target="_blank">京ICP证110318号</a>
+                </p>
+                <p>
+                    <a href="" target="_blank">营业执照</a> 新出网证(京)字242号 全国统一客服电话：
+                    <span class="highlight">4006-345-678</span>
+                    <a target="_blank" href="" class="highlight">网站地图</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/jquery-mousewheel/jquery.mousewheel.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/json.js"></script>
+    <script>
+        $(function(){
+
+
+        });
+    </script>
+</body>
+</html>

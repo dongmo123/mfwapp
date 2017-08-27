@@ -1100,8 +1100,8 @@
   margin-left: 5px;
 }
 
-.detail-wrapper .notes-content .nav-anchor {
-  display: inline-block;
+.detail-wrapper .nav-anchor {
+  display: block;
   margin-top: -60px;
   padding-top: 60px;
   visibility: hidden;
@@ -1395,6 +1395,16 @@
   display: block;
 }
 
+.detail-wrapper .absolute {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  top: auto;
+  margin-left: 200px;
+  display: block;
+  z-index: 11;
+}
+
 .detail-wrapper .ui-numProp {
   padding: 20px 0 15px 13px;
   text-align: center;
@@ -1608,4 +1618,143 @@
   height: 21px;
   background: url("../images/icon/detail-v4-sprites11.png") no-repeat -40px -60px;
   overflow: hidden;
+}
+
+.m-recommend {
+  margin-bottom: 40px;
+}
+
+.m-recommend .hd {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+.m-recommend .db {
+  margin-left: -20px;
+}
+
+.m-recommend .db li {
+  float: left;
+  display: inline;
+  margin-left: 20px;
+  width: 235px;
+  height: 273px;
+  margin-bottom: 15px;
+}
+
+.m-recommend .db a {
+  display: inline-block;
+}
+
+.m-recommend .db a:hover h4 {
+  color: #ff9d00;
+}
+
+.m-recommend .db .image {
+  height: 168px;
+  position: relative;
+  overflow: hidden;
+}
+
+.m-recommend .db .image img {
+  width: 100%;
+}
+
+.m-recommend .db .mark-type {
+  background-color: #9b6ed2;
+  color: #9b6ed2;
+  float: left;
+  padding: 1px;
+  line-height: 18px;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.m-recommend .db .mark-type strong {
+  float: left;
+  padding: 0 10px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.m-recommend .db .mark-type span {
+  float: left;
+  padding: 0 8px;
+  background-color: #fff;
+  margin-top: 1px;
+}
+
+.m-recommend .db .app-minus {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
+  text-align: center;
+  margin-top: -35px;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  line-height: 36px;
+  font-weight: normal;
+}
+
+.m-recommend .db .app-minus .minline {
+  display: inline-block;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 5px;
+}
+
+.m-recommend .db .app-minus .minline i {
+  float: left;
+  margin-left: -4px;
+  display: inline-block;
+  width: 32px;
+  height: 39px;
+  background: url("../images/icon/appminus32x39.png") no-repeat 0 0;
+  overflow: hidden;
+}
+
+.m-recommend .db .info {
+  height: 104px;
+  border: 1px solid #dce0e0;
+  border-top: 0 none;
+}
+
+.m-recommend .db .info h4 {
+  line-height: 18px;
+  height: 36px;
+  margin: 0 10px 12px;
+  color: #333;
+  overflow: hidden;
+  padding-top: 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.m-recommend .db .info .price {
+  height: 23px;
+  border-top: 1px solid #edefef;
+  padding: 10px;
+  line-height: 24px;
+  overflow: hidden;
+}
+
+.m-recommend .db .info .price > strong {
+  float: right;
+  font-size: 22px;
+  color: #ff6f00;
+  font-weight: normal;
+}
+
+.m-recommend .db .info .price > strong span {
+  color: #999;
+  font-size: 14px;
+}
+
+.m-recommend .db .info .price > span {
+  color: #999;
+  float: left;
 }

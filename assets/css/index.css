@@ -2104,7 +2104,9 @@ a {
 
 .reg-wrapper .container .signup-forms .form-field .err-tip {
   clear: both;
-  background: url("../images/icon/err_ico2.png") 0 -60px no-repeat #fff;
+  background-position: 0 -60px;
+  background-color: #fff;
+  background-repeat: no-repeat;
   padding: 0 0 3px 22px;
   width: 300px;
   font-size: 12px;
@@ -2137,6 +2139,7 @@ a {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
+  outline: none;
 }
 
 .reg-wrapper .container .signup-forms .submit-btn button:hover {
@@ -3783,6 +3786,10 @@ input::-webkit-input-placeholder {
 
 .con-main .page_loader:hover i {
   background-position: 0 -621px;
+}
+
+.con-main .loading {
+  background-color: #efefef;
 }
 
 /* sales.html */
